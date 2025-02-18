@@ -60,7 +60,7 @@ const HeroSection = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <h1>
-          <span className="highlight-text">Building AI Phone Agents </span>
+          <span className="highlight-text">Building AI Phone Agents that</span>
         </h1>
         <h2>
           <span ref={typedRef} className="typing-effect"></span>
