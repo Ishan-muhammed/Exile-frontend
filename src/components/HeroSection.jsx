@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Typed from "typed.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./Hero-Section.css";  // Ensure this file has the updated CSS
+import "./Herosection.css";  // Ensure this file has the updated CSS
 
 const HeroSection = () => {
   // References
