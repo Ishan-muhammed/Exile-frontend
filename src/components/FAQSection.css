@@ -1,0 +1,98 @@
+/* Outer wrapper: black background for the entire FAQ section */
+.faq-section {
+  background-color: #000; 
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #f8f8f8;
+}
+
+/* The single transparent box that holds title + Q&A side by side */
+.faq-box {
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  /* Transparent dark background */
+  background-color: rgba(26, 26, 26, 0.438);
+  border: 1px solid rgba(255, 255, 255, 0.123);
+  border-radius: 8px;
+  background: radial-gradient(circle at center, #07230a 20%, #000 80%);
+  padding: 30px;
+  max-width: 1200px;  /* Adjust as needed */
+ 
+    /* Center the box */
+}
+
+/* Title on the left */
+.faq-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #e4e4e4;
+  margin-right: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* If you want more top/bottom spacing: add margin or padding here */
+}
+
+/* Q&A container on the right */
+.faq-container {
+  margin-top: 30px;
+  max-width: 600px; 
+  margin-left: auto;
+  /* margin-left: auto;  not needed unless you want to push it further right */
+}
+
+/* FAQ Item styling */
+.faq-item {
+  background-color: transparent; /* The container’s background shows through */
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: rgba(26, 26, 26, 0.479);
+  border: 1px solid rgba(255, 255, 255, 0.112);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Clickable question row */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  transition: background 0.2s ease;
+}
+.faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* + or - icon */
+.faq-icon {
+  font-size: 1.5rem;
+  color: #f2f2f2;
+}
+
+/* Hidden answer container */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+  background-color: transparent;
+}
+
+.faq-answer.show {
+  max-height: 300px;
+  padding: 20px;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+/* Global Reset / Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy-Bold', sans-serif;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  position: fixed;       /* Stays at the top */
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 20px 40px;
+
+  /* Example: dark-red with partial opacity */
+  background-color: rgba(34, 34, 34, 0.37);
+  /* or use a gradient for a more dynamic look, e.g.:
+  background: linear-gradient(
+    to right,
+    rgba(139, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ); 
+  */
+
+  /* Optional border or box shadow for a subtle outline */
+  border: 1px solid rgba(92, 92, 92, 0.121);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+.logo .Ex {
+  text-decoration: none;
+  /* This styling applies to the container */
+  /* You can keep or adjust container-specific styling here */
+  font-style: bold;
+  color: #04ca71;
+}
+
+/* Target the image inside .Ex to control its size */
+.logo .Ex img {
+  height: 40px; /* Change this value to adjust the logo image size */
+  width: auto;
+}
+
+.nav-links {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #9a9898;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #fafafa;
+}
+
+.nav-cta .btn-cta {
+  margin-left: 20px;
+  background-color: #f5f9f9fd;
+  color: #000000;
+  padding: 10px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-cta .btn-cta:hover {
+  background-color: #04c971;
+}
