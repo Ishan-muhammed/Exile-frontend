@@ -82,6 +82,12 @@
   font-weight: 400;
   line-height: 1.4;
 }
+.typing-effect {
+  display: inline-block;
+  min-width: 320px; /* or 350px, whichever suits your longest typed string */
+  white-space: nowrap;
+}
+
 .hero-content h2 {
   font-weight: 400;
   font-size: 40px;

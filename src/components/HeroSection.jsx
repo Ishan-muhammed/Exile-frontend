@@ -59,11 +59,12 @@ const HeroSection = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <h1>
-          <span className="highlight-text">Building AI Phone Agents</span>
+          <span className="highlight-text">Building AI Phone Agents that</span>
         </h1>
         <h2>
-          <span ref={typedRef}></span>
+          <span ref={typedRef} className="typing-effect"></span>
         </h2>
+
         <p>We build AI phone agents to streamline your customer service and efficiency.</p>
         <a href="#demo-call" className="btn-hero">Get Started</a>
       </div>
