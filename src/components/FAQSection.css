@@ -115,12 +115,19 @@
   .faq-question {
     padding: 15px;
   }
+    /* Keep default .faq-answer collapsed on mobile */
+    .faq-answer {
+      padding: 0 20px;      /* or whatever default padding you want */
+      max-height: 0;        /* stays collapsed by default */
+      overflow: hidden;     /* hide content when collapsed */
+    }
   
-  .faq-answer,
-  .faq-answer.show {
-    padding: 15px;
-    max-height: 300px;
-  }
+    /* Only open when .show is added */
+    .faq-answer.show {
+      padding: 15px;
+      max-height: 300px;
+     }
+  
   
   .faq-answer p {
     font-size: 0.9rem;
