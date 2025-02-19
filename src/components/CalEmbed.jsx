@@ -3,7 +3,7 @@ import "./CalEmbed.css";
 
 function CalEmbed() {
   return (
-    <div className="cal-container">
+    <div id ="calEmbed" className="cal-container">
       {/* Top Header with two "boxes": Left (title) & Right (subtitle) */}
       <div className="cal-header">
         <div className="cal-header-left">

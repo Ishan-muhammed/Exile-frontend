@@ -7,7 +7,7 @@ import "./BenefitsSection.css";
 
 const BenefitsSection = () => {
   return (
-    <section className="benefits-section">
+    <section id="benefits" className="benefits-section">
       <div className="benefits-container">
         <h1 className="benefits-heading">
             Benefits

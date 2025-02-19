@@ -5,7 +5,7 @@ import "./FAQSection.css";
 
 const FAQSection = () => {
   return (
-    <section className="faq-section">
+    <section id="faq" className="faq-section">
       {/* Wrap title + FAQ in one box */}
       <div className="faq-box">
         <h2 className="faq-title">Frequently <br /> Asked Questions</h2>
