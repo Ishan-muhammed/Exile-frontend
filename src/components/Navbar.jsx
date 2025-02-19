@@ -23,7 +23,7 @@ function Navbar() {
       {/* Note the corrected syntax for className */}
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li><a href="#features">Features</a></li>
-        <li><a href="#benefits">Process (Benefits)</a></li>
+        <li><a href="#benefits">Benefits</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#calEmbed">Contact Us</a></li>
       </ul>

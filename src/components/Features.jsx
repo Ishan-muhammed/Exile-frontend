@@ -8,7 +8,7 @@ import rob from "./Images/robo1.jpg";
 import flo from "./Images/flow.jpg";
 import "./Features.css";
 
-const FeaturesSection = () => {
+const Features = () => {
   const FeatureRef = useRef(null);
 
   useEffect(() => {
@@ -32,7 +32,8 @@ const FeaturesSection = () => {
   }, []);
 
   return (
-    <section className="features-section" ref={FeatureRef}>
+    <section id="features" className="features-section" ref={FeatureRef}>
+      <h2>Features</h2>
       <div className="features-container">
         {/* Top Row - Two Small Boxes */}
         <div className="feature-box small-box">
@@ -52,7 +53,7 @@ const FeaturesSection = () => {
 
         {/* Center Row - One Large Box */}
         <div className="feature-box large-box">
-          <img src={rob} alt="robo1" />
+          <img src={rob} alt="Built Your Way" />
           <h3>Built Your Way, For Your Needs!</h3>
           <p>
             From first contact to booked meetings—fully automated, multi-channel, and custom-built to grow your business on autopilot.
@@ -79,4 +80,4 @@ const FeaturesSection = () => {
   );
 };
 
-export default FeaturesSection;
+export default Features;
