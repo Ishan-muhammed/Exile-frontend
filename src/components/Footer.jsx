@@ -28,17 +28,22 @@ function Footer() {
         </ul>
       </div>
 
-      {/* Right side (social icons) - optional */}
+      {/* Right side: Social icons + email */}
       <div className="footer-right">
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-          <img src={lin} alt="LinkedIn" />
-        </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <img src={inst} alt="Instagram" />
-        </a>
-        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-          <img src={xx} alt="Twitter" />
-        </a>
+        <div className="social-icons">
+          <a href="https://www.instagram.com/exileautomate?igsh=MTBpcHByMm1pcnV1NQ==" target="_blank" rel="noreferrer">
+            <img src={inst} alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/exile-automate-1118a7341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank" rel="noreferrer">
+            <img src={lin} alt="LinkedIn" />
+          </a>
+          <a href="https://x.com/exileautomate?t=wBuJl28dlv7F_yOAnSRruw&s=09" target="_blank" rel="noreferrer">
+            <img src={xx} alt="Twitter" />
+          </a>
+        </div>
+        <p className="footer-email">
+          Send us an e-mail: <a href="mailto:exileautomate@gmail.com">exileautomate@gmail.com</a>
+        </p>
       </div>
     </footer>
   );
