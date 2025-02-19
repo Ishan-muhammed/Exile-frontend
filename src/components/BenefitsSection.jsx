@@ -24,13 +24,13 @@ const BenefitsSection = () => {
           <div className="benefit-item">
           <img src={mon} alt="money" />
            <div className="benefit-text1">
-            <h3>Lower staffing costs</h3>
+            <h3>Lower staffing <br /> costs</h3>
             </div>
           </div>
           <div className="benefit-item">
           <img src={sta} alt="scale" />
           <div className="benefit-text2">
-              <h3>Enhanced guest <br/> satisfaction</h3>
+              <h3>Enhanced guest <br /> satisfaction</h3>
              </div>
           </div>
           <div className="benefit-item">

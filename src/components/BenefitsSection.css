@@ -79,7 +79,7 @@
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: #fdfdfd !important;
   text-align: center;
   pointer-events: none;
 }
@@ -92,7 +92,8 @@
   margin-bottom: 8px;
   font-size: 1.2rem;
   line-height: 1.5; /* Adjust this value as needed */
-  max-height: calc(1.5em * 2); /* Two lines maximum */
+  max-height: calc(1.5em * 2); 
+  max-width: 250px;/* Two lines maximum */
   overflow: hidden; /* Hide any text that exceeds two lines */
   /* Optional: you can add padding or background on a pseudo-element if you want a visual cue for truncation */
 }
