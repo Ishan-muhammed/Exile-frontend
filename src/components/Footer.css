@@ -12,7 +12,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: rgba(58, 58, 58, 0.237);
+  background: radial-gradient(circle at bottom, #07230a 20%, #000 80%);
   padding: 40px 20px;
   color: #f2f2f2;
 }
@@ -73,7 +73,7 @@ html, body {
   margin-bottom: 25px;
 }
 
-/* Each link becomes a white circle */
+/* Each link: white circle with a subtle glow even before hover */
 .social-icons a {
   display: inline-flex;
   justify-content: center;
@@ -81,10 +81,12 @@ html, body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #fff; /* White background */
-  border: 1px solid #ccc; /* Subtle gray border */
+  background-color: #fff;  /* White background */
+  border: 1px solid #ccc;  /* Subtle gray border */
   text-decoration: none;
   transition: all 0.3s ease;
+  /* Subtle default glow */
+  box-shadow: 0 0 8px 2px rgba(4, 201, 113, 0.3);
 }
 
 /* Icon inside the circle */
@@ -94,12 +96,11 @@ html, body {
   object-fit: contain;
 }
 
-/* Hover effect: background, scale, and shadow */
+/* Hover effect: intensify glow, slightly lift & enlarge */
 .social-icons a:hover {
   background-color: #f0f0f0;
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
 }
 
 /* Footer email text */
