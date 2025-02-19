@@ -9,7 +9,6 @@
 .features-section {
   width: 100%;
   padding: 90px 20px;
-  /* Matching the radial gradient style for consistency */
   background: radial-gradient(circle at center, #07230a 20%, #000 80%);
   display: flex;
   justify-content: center;
@@ -46,9 +45,10 @@
   box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Image styling */
 .feature-box img {
   width: 100%;
-  height: 300px;       /* Fixed height – adjust as needed */
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -90,16 +90,38 @@
 .small-box:nth-child(4) { grid-area: small3; }
 .small-box:nth-child(5) { grid-area: small4; }
 
-/* Responsive Adjustments */
+/* --------- Responsive Adjustments for Mobile --------- */
 @media (max-width: 768px) {
-  /* Scale down images & text on mobile */
-  .feature-box img {
-    height: 200px;
+  /* Stack each box in a single column */
+  .features-container {
+    grid-template-areas:
+      "small1"
+      "small2"
+      "large"
+      "small3"
+      "small4";
+    grid-template-columns: 1fr;
   }
+
+  /* Let images resize naturally */
+  .feature-box img {
+    height: auto;
+    max-height: 250px; /* optional limit */
+  }
+
   .feature-box h3 {
     font-size: 20px;
   }
+
   .feature-box p {
     font-size: 14px;
+  }
+
+  /* Adjust box spacing if needed */
+  .small-box,
+  .large-box {
+    max-width: 100%;
+    min-height: auto;
+    margin: 0 auto;
   }
 }
