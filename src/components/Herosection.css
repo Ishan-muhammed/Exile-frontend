@@ -56,8 +56,9 @@
   /* Each gradient covers half the container.
      The first is anchored at top, the second at bottom. */
   background:
-    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 40%) top,
-    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 40%) bottom;
+  
+    linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 90%) top,
+    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 90%) bottom;
   background-repeat: no-repeat;
   background-size: 100% 50%;
 }
