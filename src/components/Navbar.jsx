@@ -20,16 +20,19 @@ function Navbar() {
       </div>
 
       {/* Nav Links */}
+      {/* Note the corrected syntax: className={`nav-links ${isOpen ? "open" : ""}`} */}
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li><a href="#features">Features</a></li>
-        <li><a href="#process">Process</a></li>
+        <li><a href="#benefits">Benefits</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#calEmbed">Contact Us</a></li>
       </ul>
 
       {/* CTA Button */}
+      {/* If your Cal.com embed is in the same page section, use #calEmbed;
+          if it's an external link, replace with href="https://cal.com/your-embed" */}
       <div className="nav-cta">
-        <a href="#demo-call" className="btn-cta">Get started</a>
+        <a href="#calEmbed" className="btn-cta">Get started</a>
       </div>
     </nav>
   );
