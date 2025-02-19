@@ -40,7 +40,7 @@ const HeroSection = () => {
       showCursor: false,
     });
 
-    // Optional wave animation if you have an SVG ref
+    // Optional wave animation if you have an SVG or element ref
     gsap.to(waveRef.current, {
       y: 10,
       repeat: -1,
@@ -64,9 +64,7 @@ const HeroSection = () => {
         <h2>
           <span ref={typedRef}></span>
         </h2>
-        <p>
-          We build AI phone agents to streamline your customer service and efficiency.
-        </p>
+        <p>We build AI phone agents to streamline your customer service and efficiency.</p>
         <a href="#demo-call" className="btn-hero">Get Started</a>
       </div>
     </section>
