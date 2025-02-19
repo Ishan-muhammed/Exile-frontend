@@ -2,7 +2,7 @@
     /* Dark radial background, similar to Features section */
     background: radial-gradient(circle at center, #07230a 20%, #000 80%);
     position: relative;
-    min-height: 40vh; /* Make it flexible for mobile */
+    min-height: 35vh; /* Make it flexible for mobile */
     display: flex;
     align-items: center;
     justify-content: center;
