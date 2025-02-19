@@ -40,7 +40,7 @@ const HeroSection = () => {
       showCursor: false,
     });
 
-    // Optional wave animation if you have an SVG or element ref
+    // Optional wave animation if you have an SVG ref
     gsap.to(waveRef.current, {
       y: 10,
       repeat: -1,
