@@ -30,7 +30,7 @@ const BenefitsSection = () => {
           <div className="benefit-item">
           <img src={sta} alt="scale" />
           <div className="benefit-text2">
-              <h3>Enhanced guest <br/>satisfaction</h3>
+              <h3>Enhanced guest <br/> satisfaction</h3>
              </div>
           </div>
           <div className="benefit-item">
@@ -44,7 +44,7 @@ const BenefitsSection = () => {
           <div className="benefit-text4">
               <h3>Limitless scalability</h3>
              </div>
-            <h3>Limitless scalability</h3>
+            
           </div>
           
         </div>
