@@ -1,6 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 
 /* Global Reset / Base Styles */
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
