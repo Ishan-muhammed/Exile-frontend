@@ -66,7 +66,10 @@ const HeroSection = () => {
         </h2>
 
         <p>We build AI phone agents to streamline your customer service and efficiency.</p>
-        <a href="#demo-call" className="btn-hero">Get Started</a>
+        <a href="https://cal.com/your-calendar-url"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="btn-hero">Book A Call</a>
       </div>
     </section>
   );

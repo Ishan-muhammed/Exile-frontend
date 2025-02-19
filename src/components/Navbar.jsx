@@ -30,7 +30,10 @@ function Navbar() {
 
       {/* CTA Button */}
       <div className="nav-cta">
-        <a href="#calEmbed" className="btn-cta">Get started</a>
+        <a href="https://cal.com/your-calendar-url"
+              target="_blank"
+              rel="noopener noreferrer"
+         className="btn-cta">Book a Call</a>
       </div>
     </nav>
   );
