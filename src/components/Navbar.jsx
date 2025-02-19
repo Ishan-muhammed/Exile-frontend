@@ -21,12 +21,31 @@ function Navbar() {
 
       {/* Nav Links */}
       {/* Note the corrected syntax for className */}
-      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#benefits">Process (Benefits)</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#calEmbed">Contact Us</a></li>
-      </ul>
+      // Navbar.jsx
+<ul>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#benefits">Benefits</a></li>
+  <li><a href="#faq">FAQ</a></li>
+  <li><a href="#calEmbed">Contact Us</a></li>
+</ul>
+
+// In App.jsx or the same page
+<section id="features">
+  <h2>Features</h2>
+</section>
+
+<section id="benefits">
+  <h2>Benefits</h2>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+</section>
+
+<section id="calEmbed">
+  <h2>Contact / CalEmbed Section</h2>
+</section>
+
 
       {/* CTA Button */}
       <div className="nav-cta">
