@@ -5,6 +5,7 @@ import img from "./Images/multilngualy.jpg";
 import hum from "./Images/Ehuman.jpg";
 import inte from "./Images/integrations bl2.jpg";
 import rob from "./Images/robo1.jpg";
+import flo from "./Images/flow.jpg";
 import "./Features.css";
 
 const FeaturesSection = () => {
@@ -67,7 +68,7 @@ const FeaturesSection = () => {
           </p>
         </div>
         <div className="feature-box small-box">
-          <img src={inte} alt="Custom Call Flows" />
+          <img src={flo} alt="Custom Call Flows" />
           <h3>Custom Call Flows</h3>
           <p>
             Agents follow your specific call flows with safeguards to ensure consistent and accurate interactions.
