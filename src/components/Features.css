@@ -18,7 +18,7 @@
   display: grid;
   grid-template-areas:
     "small1 small2"
-    "large large"
+    "large  large"
     "small3 small4";
   grid-gap: 20px;
   grid-row-gap: 40px;
@@ -27,6 +27,7 @@
   justify-content: center;
 }
 
+/* Common box styling */
 .feature-box {
   position: relative;
   background-color: rgba(34, 34, 34, 0.468);
@@ -40,6 +41,7 @@
   overflow: hidden;
 }
 
+/* Hover effect */
 .feature-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -54,18 +56,26 @@
   margin-bottom: 15px;
 }
 
+/* Text: now white */
 .feature-box h3 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #c8c8c8;
+  color: #fff; /* changed to white */
 }
 
 .feature-box p {
   font-size: 16px;
-  color: #c8c8c8;
+  color: #fff; /* changed to white */
 }
 
-/* Box types for grid styling */
+/* Grid area assignments */
+.small-box:nth-child(1) { grid-area: small1; }
+.small-box:nth-child(2) { grid-area: small2; }
+.large-box             { grid-area: large; }
+.small-box:nth-child(4) { grid-area: small3; }
+.small-box:nth-child(5) { grid-area: small4; }
+
+/* Sizes for each box type */
 .small-box {
   display: flex;
   flex-direction: column;
@@ -82,13 +92,6 @@
   align-items: center;
   justify-content: center;
 }
-
-/* Specific Grid Area Assignments */
-.small-box:nth-child(1) { grid-area: small1; }
-.small-box:nth-child(2) { grid-area: small2; }
-.large-box             { grid-area: large; }
-.small-box:nth-child(4) { grid-area: small3; }
-.small-box:nth-child(5) { grid-area: small4; }
 
 /* --------- Responsive Adjustments for Mobile --------- */
 @media (max-width: 768px) {
