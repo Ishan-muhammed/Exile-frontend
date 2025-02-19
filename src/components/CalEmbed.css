@@ -1,7 +1,7 @@
 /* 1) The overall container with a dark background */
 .cal-container {
   background-color: #000; /* Black background */
-  min-height: 190vh;      
+  min-height: 200px;      
   padding: 60px 20px;
 }
 
