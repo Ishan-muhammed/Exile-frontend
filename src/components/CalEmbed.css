@@ -1,6 +1,6 @@
 /* 1) The overall container with a dark background */
 .cal-container {
-  background-color: #000; /* Black background */
+  background-color: #f7f5f5; /* Black background */
   min-height: 200px;      /* You can remove or reduce further if needed */
   padding: 40px 20px;     
   margin-bottom: 80px;/* Reduced from 60px 20px */
@@ -9,7 +9,7 @@
 /* 2) Header row: "Let's Connect" (left) & text (right) */
 .cal-header {
   max-width: 1200px;
-  margin: 60px auto 40px auto; /* Reduced from 100px auto 70px auto */
+  margin: 60px auto 60px auto; /* Reduced from 100px auto 70px auto */
   display: flex;
   justify-content: space-between;
   align-items: center;
