@@ -71,6 +71,12 @@
 }
 
 /* Benefit text overlays */
+.benefit-title span {
+  display: block;
+  /* Optionally add any styling (like padding or margin) if needed */
+}
+
+/* Existing styles remain unchanged */
 .benefit-text1,
 .benefit-text2,
 .benefit-text3,
@@ -79,23 +85,18 @@
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fdfdfd !important;
+  color: #ffffff;
   text-align: center;
   pointer-events: none;
 }
 
-/* Limit the <h3> elements to two lines */
 .benefit-text1 h3,
 .benefit-text2 h3,
 .benefit-text3 h3,
 .benefit-text4 h3 {
   margin-bottom: 8px;
   font-size: 1.2rem;
-  line-height: 1.5; /* Adjust this value as needed */
-  max-height: calc(1.5em * 2); 
-  max-width: 250px;/* Two lines maximum */
-  overflow: hidden; /* Hide any text that exceeds two lines */
-  /* Optional: you can add padding or background on a pseudo-element if you want a visual cue for truncation */
+  /* Remove any properties that might force unwanted wrapping */
 }
 
 

@@ -21,18 +21,26 @@ const BenefitsSection = () => {
         </h2>
         
         <div className="benefits-list">
-          <div className="benefit-item">
-          <img src={mon} alt="money" />
-           <div className="benefit-text1">
-            <h3>Lower staffing <br /> costs</h3>
-            </div>
-          </div>
-          <div className="benefit-item">
-          <img src={sta} alt="scale" />
-          <div className="benefit-text2">
-              <h3>Enhanced guest <br /> satisfaction</h3>
-             </div>
-          </div>
+        <div className="benefit-item">
+  <img src={mon} alt="money" />
+  <div className="benefit-text1">
+    <h3 className="benefit-title">
+      <span>Lower staffing</span>
+      <span>costs</span>
+    </h3>
+  </div>
+</div>
+
+<div className="benefit-item">
+  <img src={sta} alt="scale" />
+  <div className="benefit-text2">
+    <h3 className="benefit-title">
+      <span>Enhanced guest</span>
+      <span>satisfaction</span>
+    </h3>
+  </div>
+</div>
+
           <div className="benefit-item">
             <img src={full} alt="full 24-7" />
              <div className="benefit-text3">
