@@ -27,6 +27,7 @@
   justify-content: center;
 }
 
+/* Feature Box Styles */
 .feature-box {
   position: relative;
   background-color: rgba(34, 34, 34, 0.468);
@@ -92,7 +93,7 @@
 
 /* --------- Responsive Adjustments for Mobile --------- */
 @media (max-width: 768px) {
-  /* Stack each box in a single column */
+  /* Stack each box in a single column and center them */
   .features-container {
     grid-template-areas:
       "small1"
@@ -101,9 +102,10 @@
       "small3"
       "small4";
     grid-template-columns: 1fr;
+    justify-items: center; /* Ensures boxes are centered horizontally */
+    align-items: center;   /* (Optional) If you want vertical centering in each row */
   }
 
-  /* Let images resize naturally */
   .feature-box img {
     height: auto;
     max-height: 250px; /* optional limit */
