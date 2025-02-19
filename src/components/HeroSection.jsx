@@ -2,10 +2,9 @@ import React, { useRef, useEffect } from "react";
 import Typed from "typed.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./Herosection.css";  // Ensure this file has the updated CSS
+import "./Herosection.css";
 
 const HeroSection = () => {
-  // References
   const heroRef = useRef(null);
   const typedRef = useRef(null);
   const waveRef = useRef(null);
@@ -63,7 +62,7 @@ const HeroSection = () => {
           <span className="highlight-text">Building AI Phone Agents that</span>
         </h1>
         <h2>
-          <span ref={typedRef} className="typing-effect"></span>
+          <span ref={typedRef}></span>
         </h2>
         <p>
           We build AI phone agents to streamline your customer service and efficiency.

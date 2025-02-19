@@ -11,15 +11,14 @@
   margin-top: 50px;
   display: flex;
   align-items: flex-start;
-  /* Transparent dark background */
-  background-color: rgba(26, 26, 26, 0.438);
+  /* Using a radial gradient for a dynamic dark look */
+  background: radial-gradient(circle at center, #07230a 20%, #000 80%);
   border: 1px solid rgba(255, 255, 255, 0.123);
   border-radius: 8px;
-  background: radial-gradient(circle at center, #07230a 20%, #000 80%);
   padding: 30px;
-  max-width: 1200px;  /* Adjust as needed */
- 
-    /* Center the box */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Title on the left */
@@ -30,23 +29,20 @@
   margin-right: 40px;
   margin-top: 0;
   margin-bottom: 0;
-  /* If you want more top/bottom spacing: add margin or padding here */
 }
 
 /* Q&A container on the right */
 .faq-container {
+  max-width: 600px;
   margin-top: 30px;
-  max-width: 600px; 
   margin-left: auto;
-  /* margin-left: auto;  not needed unless you want to push it further right */
 }
 
 /* FAQ Item styling */
 .faq-item {
-  background-color: transparent; /* The container’s background shows through */
+  background-color: rgba(26, 26, 26, 0.479);
   margin-bottom: 10px;
   border-radius: 4px;
-  background-color: rgba(26, 26, 26, 0.479);
   border: 1px solid rgba(255, 255, 255, 0.112);
   overflow: hidden;
   transition: all 0.3s ease;
@@ -61,6 +57,7 @@
   padding: 20px;
   transition: background 0.2s ease;
 }
+
 .faq-question:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
@@ -95,4 +92,37 @@
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .faq-box {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .faq-container {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+  
+  .faq-question {
+    padding: 15px;
+  }
+  
+  .faq-answer,
+  .faq-answer.show {
+    padding: 15px;
+    max-height: 300px;
+  }
+  
+  .faq-answer p {
+    font-size: 0.9rem;
+  }
 }

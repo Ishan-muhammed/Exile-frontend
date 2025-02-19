@@ -2,13 +2,13 @@
 
 .hero {
   position: relative;
-  height: 120vh;
+  min-height: 100vh; /* Instead of 120vh for better mobile responsiveness */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 60px; /* Account for fixed navbar height */
   background: #111;
 }
 
@@ -23,7 +23,7 @@
   z-index: 1;
 }
 
-/* Full-screen dotted pattern */
+/* Dotted background */
 .hero::before {
   content: "";
   position: absolute;
@@ -62,14 +62,21 @@
   backface-visibility: hidden;
 }
 
+/* Headings */
 .hero-content h1 {
   font-size: 45px;
   margin-bottom: 20px;
   font-weight: 400;
   line-height: 1.4;
 }
+.hero-content h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
 
-.hero-content h1 .highlight-text {
+/* The highlighted text */
+.highlight-text {
   display: inline-block;
   background: linear-gradient(to right, #04c971, #030303);
   padding: 0.3em 0.6em;
@@ -77,24 +84,19 @@
   color: #f2f2f2;
 }
 
-.hero-content h2 {
-  font-weight: 400;
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-/* NEW: Ensure the typed text container has a fixed width */
-.typing-effect {
+/* Remove min-width so text can wrap on mobile */
+.hero-content h2 span {
   display: inline-block;
-  min-width: 350px; /* Adjust based on your longest text string */
-  white-space: nowrap;
+  white-space: nowrap; /* optional: remove if you want it to wrap */
 }
 
+/* Paragraph */
 .hero-content p {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
+/* CTA button */
 .btn-hero {
   display: inline-block;
   background-color: #efeded;
@@ -105,7 +107,19 @@
   font-weight: bold;
   transition: background-color 0.3s;
 }
-
 .btn-hero:hover {
   background-color: #04c971;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content h2 {
+    font-size: 26px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
 }

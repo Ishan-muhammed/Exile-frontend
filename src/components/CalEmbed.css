@@ -1,58 +1,93 @@
-/* 1) The overall container with a light background */
+/* 1) The overall container with a dark background */
 .cal-container {
-    background-color: #000000; /* Light background (white or off-white) */
-    min-height: 150vh;        /* Fill the screen’s height */
-    padding: 60px 20px;       /* Space around the header + card */
+  background-color: #000; /* Black background */
+  min-height: 150vh;      
+  padding: 60px 20px;
+}
+
+/* 2) Header row: "Let's Connect" (left) + text (right) */
+.cal-header {
+  max-width: 1200px;
+  margin: 100px auto 70px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.cal-header-left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c8c8c8;
+  margin: 0;
+}
+
+.cal-header-right {
+  max-width: 400px;
+  text-align: right;
+  color: #c8c8c8;
+  font-size: 16px;
+  margin-top: 110px;
+}
+
+/* Highlight color for "Connect" */
+.highlight {
+  color: #04c971;
+}
+
+/* 3) The main card containing the Cal.com embed */
+.cal-box {
+  background-color: rgba(26, 26, 26, 0.438);
+  border: 1px solid rgba(255, 255, 255, 0.123);
+  border-radius: 8px;
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 4) The Cal.com iframe itself */
+.cal-iframe {
+  margin-top: 80px;
+  border: none;
+  width: 100%;
+  height: 600px;
+  border-radius: 6px;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .cal-container {
+    padding: 40px 10px;
+    min-height: auto; /* Let content determine height */
   }
-  
-  /* 2) Header row: "Let's Connect" (left) + text (right) */
+
   .cal-header {
-    margin-top: 100px;
-    max-width: 1200px;
-    margin: 0 auto 70px;  
-    min-height: 120px;    /* Center horizontally & add bottom space */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
-  
+
   .cal-header-left h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #c8c8c8; /* Dark text */
-    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
-  
+
   .cal-header-right {
-    margin-top: 110px;
-    max-width: 400px; /* Limits width for the text on the right */
-    text-align: right; /* Align text to the right */
-    color: #c8c8c8;
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 0;
   }
-  
-  .highlight {
-    color: #04c971; /* Example highlight color for "Connect" */
-  }
-  
-  /* 3) The main white card containing the Cal embed */
+
   .cal-box {
-    background-color: rgba(26, 26, 26, 0.438);
-    border: 1px solid rgba(255, 255, 255, 0.123);   /* Light gray border */
-    border-radius: 8px;
-    width: 100%;
-    height: 800px;
-    margin: 0 auto;               /* Center horizontally */
-    padding: 40px;                /* Inner spacing */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
   }
-  
-  /* 4) The Cal.com iframe itself */
+
   .cal-iframe {
-    margin-top: 80px;
-    border: none;
-    width: 100%;
-    height: 600px; /* Adjust as needed to show the full schedule */
-    border-radius: 6px; /* Slight rounding if desired */
+    margin-top: 20px;
+    height: 400px; /* Shorter iframe on mobile */
   }
-  
+}

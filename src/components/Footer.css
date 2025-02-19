@@ -1,150 +1,141 @@
-/* 1) Dark background for the page */
+/* 1) Ensure the entire page is dark */
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  /* 2) Footer container */
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 2) Footer container */
+.footer {
+  min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(58, 58, 58, 0.237);
+  padding: 40px 20px;
+  color: #f2f2f2;
+}
+
+/* Left section */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-top: 20px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Center links */
+.footer-center {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+  color: #04c971;
+}
+
+/* Right section */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* 3) Social icons container */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+/* Each link becomes a white circle */
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff; /* White background */
+  border: 1px solid #ccc; /* Subtle gray border */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside the circle */
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Hover effect: background, scale, and shadow */
+.social-icons a:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Footer email text */
+.footer-email {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-email a {
+  color: #66a3ff;
+  text-decoration: none;
+}
+
+.footer-email a:hover {
+  text-decoration: underline;
+}
+
+/* 4) Responsive layout for smaller screens */
+@media (max-width: 768px) {
   .footer {
-    min-height: 250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  
-    /* Semi-transparent dark background for the footer */
-    background-color: rgba(58, 58, 58, 0.237);
-    padding: 40px 20px;
-    color: #f2f2f2;
-  }
-  
-  /* Left section */
-  .footer-left {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .footer-logo {
-    width: 120px;
-    margin-top: 20px;
-  }
-  
-  .footer-copy {
-    font-size: 0.9rem;
-    margin-top: 20px;
-  }
-  
-  /* Center links */
-  .footer-center {
-    display: flex;
     align-items: center;
+    text-align: center;
+  }
+  
+  .footer-left,
+  .footer-right {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-center {
+    margin-bottom: 20px;
   }
   
   .footer-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
   }
-  
-  .footer-links li a {
-    text-decoration: none;
-    color: #f2f2f2;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-  }
-  
-  .footer-links li a:hover {
-    color: #04c971;
-  }
-  
-  /* Right section */
-  .footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  /* 3) Social icons container */
-  /* Social icons container */
-.social-icons {
-    display: flex;
-    gap: 20px; /* space between circles */
-    margin-bottom: 25px;
-
-  }
-  
-  /* Each link becomes a white circle */
-  .social-icons a {
-    
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50px;       /* circle width */
-    height: 50px;  
-    transform: translateY(-5px);
-    box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* circle height */
-    border-radius: 50%;
-    background-color: #fff; /* white background */
-    border: 1px solid #ccc; /* subtle gray border */
-    text-decoration: none;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-  }
-  
-  /* Icon inside the circle */
-  .social-icons img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-  
-  /* Hover effect: subtle background, scale, and shadow */
-  .social-icons a:hover {
-    background-color: #f0f0f0;      /* Slightly darker than pure white */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More noticeable shadow */
-    transform: scale(1.05);         /* Slightly enlarge the circle */
-  }
-  
-  /* Footer email text */
-  .footer-email {
-    margin-top: 50px;
-    font-size: 0.9rem;
-    margin: 0;
-  }
-  
-  .footer-email a {
-    color: #66a3ff;
-    text-decoration: none;
-  }
-  
-  .footer-email a:hover {
-    text-decoration: underline;
-  }
-  
-  /* 4) Responsive layout for smaller screens */
-  @media (max-width: 768px) {
-    .footer {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .footer-left,
-    .footer-right {
-      align-items: center;
-      margin-bottom: 20px;
-    }
-  
-    .footer-center {
-      margin-bottom: 20px;
-    }
-  
-    .footer-links {
-      justify-content: center;
-    }
-  }
-  
+}
