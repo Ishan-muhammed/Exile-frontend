@@ -1,130 +1,86 @@
-/* Global box-sizing (optional but recommended) */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Features Section Styles */
+/* Overall container */
 .features-section {
-  width: 100%;
-  padding: 90px 20px;
-  background: radial-gradient(circle at center, #07230a 20%, #000 80%);
-  display: flex;
-  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.features-container {
-  display: grid;
-  grid-template-areas:
-    "small1 small2"
-    "large  large"
-    "small3 small4";
-  grid-gap: 20px;
-  grid-row-gap: 40px;
-  max-width: 1200px;
-  width: 100%;
-  justify-content: center;
-}
-
-/* Common box styling */
-.feature-box {
-  position: relative;
-  background-color: rgba(34, 34, 34, 0.468);
-  border: 1px solid rgba(92, 92, 92, 0.121);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 20px;
-  border-radius: 8px;
+/* Heading */
+.features-heading {
+  font-size: 2rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 0;
-  overflow: hidden;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Hover effect */
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Subheading */
+.features-subheading {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* Image styling */
-.feature-box img {
+/* Grid for the cards */
+.features-list {
+  display: grid;
+  /* 2 columns on bigger screens, auto-fit down to 1 column if not enough space */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each feature card */
+.feature-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: left;
+}
+
+/* Card image */
+.feature-item img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
+  object-fit: cover;
 }
 
-/* Text: now white */
-.feature-box h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #fff; /* changed to white */
+/* Card title */
+.feature-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.feature-box p {
-  font-size: 16px;
-  color: #fff; /* changed to white */
+/* Card text */
+.feature-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
 }
 
-/* Grid area assignments */
-.small-box:nth-child(1) { grid-area: small1; }
-.small-box:nth-child(2) { grid-area: small2; }
-.large-box             { grid-area: large; }
-.small-box:nth-child(4) { grid-area: small3; }
-.small-box:nth-child(5) { grid-area: small4; }
-
-/* Sizes for each box type */
-.small-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 300px;
-  max-width: 500px;
-}
-
-.large-box {
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* --------- Responsive Adjustments for Mobile --------- */
+/* --------- Responsive (Mobile) Adjustments --------- */
 @media (max-width: 768px) {
-  /* Stack each box in a single column */
-  .features-container {
-    grid-template-areas:
-      "small1"
-      "small2"
-      "large"
-      "small3"
-      "small4";
-    grid-template-columns: 1fr;
+  .features-heading {
+    font-size: 1.8rem;
   }
 
-  /* Let images resize naturally */
-  .feature-box img {
-    height: auto;
-    max-height: 250px; /* optional limit */
+  .features-subheading {
+    font-size: 0.95rem;
   }
 
-  .feature-box h3 {
-    font-size: 20px;
+  .feature-item h3 {
+    font-size: 1.1rem;
   }
 
-  .feature-box p {
-    font-size: 14px;
-  }
-
-  /* Adjust box spacing if needed */
-  .small-box,
-  .large-box {
-    max-width: 100%;
-    min-height: auto;
-    margin: 0 auto;
+  .feature-item p {
+    font-size: 0.9rem;
   }
 }
