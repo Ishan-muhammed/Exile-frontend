@@ -66,7 +66,7 @@ const HeroSection = () => {
         </h2>
 
         <p>We build AI phone agents to streamline your customer service and efficiency.</p>
-        <a href="https://cal.com/your-calendar-url"
+        <a href="https://cal.com/exile-automate-vvgfkw/ai-voice-agent-discovery-call"
               target="_blank"
               rel="noopener noreferrer" 
               className="btn-hero">Book A Call</a>

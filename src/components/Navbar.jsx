@@ -30,7 +30,7 @@ function Navbar() {
 
       {/* CTA Button */}
       <div className="nav-cta">
-        <a href="https://cal.com/your-calendar-url"
+        <a href="https://cal.com/exile-automate-vvgfkw/ai-voice-agent-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
          className="btn-cta">Book a Call</a>
