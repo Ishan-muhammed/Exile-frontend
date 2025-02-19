@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  min-height: 100vh; /* Instead of 120vh for better mobile responsiveness */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,10 @@
   pointer-events: none;
 }
 
-/* Fade edges with radial gradient */
+/* 
+  Updated: TWO radial gradients (one at top, one at bottom)
+  to blur/fade the dotted pattern at both edges.
+*/
 .hero::after {
   content: "";
   position: absolute;
@@ -45,9 +48,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 60%, #000 100%);
   z-index: 3;
   pointer-events: none;
+  background: 
+    radial-gradient(circle at top, rgba(0, 0, 0, 0) 60%, #000 100%) top,
+    radial-gradient(circle at bottom, rgba(0, 0, 0, 0) 60%, #000 100%) bottom;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
 }
 
 /* Hero Content */
@@ -75,19 +82,13 @@
   margin-bottom: 20px;
 }
 
-/* The highlighted text */
+/* Highlighted text in the H1 */
 .highlight-text {
   display: inline-block;
   background: linear-gradient(to right, #04c971, #030303);
   padding: 0.3em 0.6em;
   clip-path: polygon(3% 0%, 100% 0%, 95% 100%, 0% 100%);
   color: #f2f2f2;
-}
-
-/* Remove min-width so text can wrap on mobile */
-.hero-content h2 span {
-  display: inline-block;
-  white-space: nowrap; /* optional: remove if you want it to wrap */
 }
 
 /* Paragraph */
