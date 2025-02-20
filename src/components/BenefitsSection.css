@@ -34,10 +34,10 @@
   line-height: 1.6;
 }
 
-/* 2×2 grid on larger screens */
+/* Desktop: Single horizontal row for benefit items */
 .benefits-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);  /* 4 items in one row */
   gap: 30px;
   margin-top: 40px;
   justify-items: center;
@@ -67,7 +67,7 @@
   box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Overlay container for the text */
+/* Overlay container for the text, positioned at the top of the image */
 .benefit-overlay {
   position: absolute;
   top: 15px;        /* Move text to top side of image */
@@ -75,7 +75,7 @@
   transform: translateX(-50%);
   text-align: center;
   z-index: 1;
-  pointer-events: none; /* So taps/clicks pass through to the item */
+  pointer-events: none; /* so taps/clicks pass through */
 }
 
 /* Benefit title styling */
@@ -83,14 +83,14 @@
   color: #d8dedeb9;
   font-size: 1.1rem;
   font-weight: 500;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .benefit-title span {
   display: block;
 }
 
-/* Mobile responsiveness: stack in one column */
+/* Mobile responsiveness: stack benefit items in one column */
 @media (max-width: 768px) {
   .benefits-list {
     grid-template-columns: 1fr;
@@ -106,3 +106,4 @@
     font-size: 1rem;
   }
 }
+

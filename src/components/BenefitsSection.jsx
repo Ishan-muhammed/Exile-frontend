@@ -1,5 +1,5 @@
 import React from "react";
-import full from "./Images/24-7.jpg";
+import full from "./Images/24-7phone.jpg";
 import mon from "./Images/money.jpg";
 import sca from "./Images/scale.jpg";
 import sta from "./Images/star.jpg";
