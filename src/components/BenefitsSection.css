@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Remove the tap highlight (white line) on mobile */
-.benefit-item,
+/* Remove the white line highlight on mobile tap */
+.benefit-item, 
 .benefit-item * {
   -webkit-tap-highlight-color: transparent;
 }
@@ -27,40 +27,49 @@
 .benefits-section h2 {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #d8dedeb9; /* Main text color */
+  color: #d8dedeb9; /* Text color for subheading */
   text-align: center;
   max-width: 800px;
   margin: 0 auto 3rem auto;
   line-height: 1.6;
 }
 
-/* Desktop: Single horizontal row for benefit items */
+/* Benefits list as a 2×2 grid on larger screens */
 .benefits-list {
-  height: 200px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* 4 items in one row */
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 40px;
   justify-items: center;
 }
 
-/* Benefit item container */
+/* Each benefit item has text on top, image below */
 .benefit-item {
-  position: relative; 
-  width: 260px;   /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;       /* Adjust as needed */
+  background-color: #1e1e1e; /* Optional background if you want a box behind the image */
   border-radius: 8px;
-  overflow: hidden; 
-
+  padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image fills the box */
+/* Benefit title text color */
+.benefit-title {
+  color: #d8dedeb9; 
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Image styling */
 .benefit-item img {
   width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Hover effect (optional) */
@@ -69,33 +78,10 @@
   box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Overlay container for the text, positioned at the top of the image */
-.benefit-overlay {
-  position: absolute;
-  top: 15px;        /* Move text to top side of image */
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 1;
-  pointer-events: none; /* so taps/clicks pass through */
-}
-
-/* Benefit title styling */
-.benefit-title {
-  color: #d8dedeb9;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-.benefit-title span {
-  display: block;
-}
-
-/* Mobile responsiveness: stack benefit items in one column */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .benefits-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack them in one column on mobile */
     gap: 20px;
   }
 
@@ -103,9 +89,8 @@
     width: 90%;
     margin: 0 auto;
   }
-
+  
   .benefit-title {
     font-size: 1rem;
   }
 }
-
