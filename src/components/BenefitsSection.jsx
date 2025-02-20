@@ -23,7 +23,7 @@ const BenefitsSection = () => {
               <span>Lower staffing </span>
               <span>costs</span>
             </h3>
-            <img src={mon} alt="money" loading="lazy" />
+            <img src={mon} alt="money" />
           </div>
 
           <div className="benefit-item">
@@ -31,7 +31,7 @@ const BenefitsSection = () => {
               <span>Enhanced guest </span>
               <span>satisfaction</span>
             </h3>
-            <img src={sta} alt="star" loading="lazy" />
+            <img src={sta} alt="star" />
           </div>
 
           <div className="benefit-item">
@@ -39,7 +39,7 @@ const BenefitsSection = () => {
               <span>24/7 Guest </span>
               <span>support</span>
             </h3>
-            <img src={full} alt="24/7 support" loading="lazy" />
+            <img src={full} alt="24/7 support" />
           </div>
 
           <div className="benefit-item">
@@ -47,7 +47,7 @@ const BenefitsSection = () => {
               <span>Limitless </span>
               <span>scalability</span>
             </h3>
-            <img src={sca} alt="scale" loading="lazy" />
+            <img src={sca} alt="scale" />
           </div>
         </div>
       </div>
