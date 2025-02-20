@@ -1,20 +1,34 @@
-/* Global box-sizing (optional but recommended) */
+/* Global box-sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Features Section Styles */
+/* Features Section */
 .features-section {
   width: 100%;
   padding: 90px 20px;
   background: radial-gradient(circle at center, #07230a 20%, #000 80%);
+  /* Remove the flex here so the grid can properly center on mobile
   display: flex;
-  justify-content: center;
+  justify-content: center; 
+  */
 }
 
+.features-section h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* The Grid Container */
 .features-container {
+  /* Center the grid in the page */
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  
   display: grid;
   grid-template-areas:
     "small1 small2"
@@ -22,8 +36,6 @@
     "small3 small4";
   grid-gap: 20px;
   grid-row-gap: 40px;
-  max-width: 1200px;
-  width: 100%;
   justify-content: center;
 }
 
@@ -49,7 +61,7 @@
 /* Image styling */
 .feature-box img {
   width: 100%;
-  height: 300px;
+  height: 300px; /* Desktop height */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -66,7 +78,7 @@
   color: #c8c8c8;
 }
 
-/* Box types for grid styling */
+/* Box sizing for grid layout */
 .small-box {
   display: flex;
   flex-direction: column;
@@ -84,16 +96,15 @@
   justify-content: center;
 }
 
-/* Specific Grid Area Assignments */
+/* Grid area assignment */
 .small-box:nth-child(1) { grid-area: small1; }
 .small-box:nth-child(2) { grid-area: small2; }
 .large-box             { grid-area: large; }
 .small-box:nth-child(4) { grid-area: small3; }
 .small-box:nth-child(5) { grid-area: small4; }
 
-/* --------- Responsive Adjustments for Mobile --------- */
+/* ---------- Responsive Mobile Styles ---------- */
 @media (max-width: 768px) {
-  /* Stack each box in a single column and center them */
   .features-container {
     grid-template-areas:
       "small1"
@@ -102,13 +113,15 @@
       "small3"
       "small4";
     grid-template-columns: 1fr;
-    justify-items: center; /* Ensures boxes are centered horizontally */
-    align-items: center;   /* (Optional) If you want vertical centering in each row */
+    grid-gap: 20px;
+    grid-row-gap: 30px;
+    justify-items: center;
+    align-items: center;
   }
 
   .feature-box img {
-    height: auto;
-    max-height: 250px; /* optional limit */
+    height: auto;      /* Let images shrink properly on small screens */
+    max-height: 250px; /* Optional max limit */
   }
 
   .feature-box h3 {
@@ -119,7 +132,7 @@
     font-size: 14px;
   }
 
-  /* Adjust box spacing if needed */
+  /* Let the boxes take full width in mobile view */
   .small-box,
   .large-box {
     max-width: 100%;
