@@ -16,26 +16,46 @@ const BenefitsSection = () => {
           with seamless, human-like interactions. Enjoy scalable, consistent service that ensures 
           every guest feels valued—day or night.
         </h2>
-
+        
         <div className="benefits-list">
           <div className="benefit-item">
-            <h3 className="benefit-title">Cheaper than Employees/VAs</h3>
             <img src={mon} alt="money" />
+            <div className="benefit-overlay">
+              <h3 className="benefit-title">
+                <span>Lower staffing</span>
+                <span>costs</span>
+              </h3>
+            </div>
           </div>
 
           <div className="benefit-item">
-            <h3 className="benefit-title">72% Higher Conversion Rates</h3>
-            <img src={sta} alt="star" />
+            <img src={sta} alt="scale" />
+            <div className="benefit-overlay">
+              <h3 className="benefit-title">
+                <span>Enhanced guest</span>
+                <span>satisfaction</span>
+              </h3>
+            </div>
           </div>
 
           <div className="benefit-item">
-            <h3 className="benefit-title">Limitless Scalability</h3>
             <img src={full} alt="24/7 support" />
+            <div className="benefit-overlay">
+              <h3 className="benefit-title">
+                <span>24/7 Guest</span>
+                <span>support</span>
+              </h3>
+            </div>
           </div>
 
           <div className="benefit-item">
-            <h3 className="benefit-title">100% Consistency</h3>
             <img src={sca} alt="scale" />
+            <div className="benefit-overlay">
+              <h3 className="benefit-title">
+                <span>Limitless</span>
+                <span>scalability</span>
+              </h3>
+            </div>
           </div>
         </div>
       </div>
