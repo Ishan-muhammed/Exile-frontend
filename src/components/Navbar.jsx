@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import log from "./Images/ngreen.png";
 import "../index.css";
 
@@ -16,11 +17,10 @@ function Navbar() {
 
       {/* Hamburger Icon (shown on mobile) */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        &#9776; {/* or use an icon library */}
+        &#9776;
       </div>
 
       {/* Nav Links */}
-      {/* Note the corrected syntax for className */}
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li><a href="#features">Features</a></li>
         <li><a href="#benefits">Benefits</a></li>
@@ -30,10 +30,9 @@ function Navbar() {
 
       {/* CTA Button */}
       <div className="nav-cta">
-        <a href="https://cal.com/exile-automate-vvgfkw/ai-voice-agent-discovery-call"
-              target="_blank"
-              rel="noopener noreferrer"
-         className="btn-cta">Book a Call</a>
+        <Link to="/demo" className="btn-cta">
+          Free Demo Call
+        </Link>
       </div>
     </nav>
   );
