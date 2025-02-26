@@ -47,7 +47,7 @@ const DemoForm = () => {
         <label>Name</label>
         <input
           type="text"
-          placeholder="Jane Smith"
+          placeholder="Happy person"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -56,7 +56,7 @@ const DemoForm = () => {
         <label>Email</label>
         <input
           type="email"
-          placeholder="steve@apple.com"
+          placeholder="happyperson@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -65,7 +65,7 @@ const DemoForm = () => {
         <label>Business Name</label>
         <input
           type="text"
-          placeholder="Apple"
+          placeholder="Happy"
           value={businessName}
           onChange={(e) => setBusinessName(e.target.value)}
         />
@@ -79,12 +79,6 @@ const DemoForm = () => {
           <option value="">Select an Avatar</option>
           <option value="Jordan - American Accent (Hospital Appointment Reminder)">
             Jordan - American Accent (Hospital Appointment Reminder)
-          </option>
-          <option value="Samantha - British Accent (E-Commerce Promotion)">
-            Samantha - British Accent (E-Commerce Promotion)
-          </option>
-          <option value="Liam - Australian Accent (Tech Support)">
-            Liam - Australian Accent (Tech Support)
           </option>
           {/* Add more options as needed */}
         </select>
@@ -104,7 +98,7 @@ const DemoForm = () => {
         <label>WhatsApp Number (Used For Contact)</label>
         <input
           type="tel"
-          placeholder="+1 949 373 6021"
+          placeholder="+1 858 262 7132"
           value={whatsappNumber}
           onChange={(e) => setWhatsappNumber(e.target.value)}
         />
@@ -112,7 +106,7 @@ const DemoForm = () => {
         <label>Phone Number (Used For Demo Call)</label>
         <input
           type="tel"
-          placeholder="+1 949 373 6021"
+          placeholder="+1 858 262 7132"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
