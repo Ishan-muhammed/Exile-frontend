@@ -13,20 +13,36 @@ import DemoForm from "./components/Freedemo";
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={
-          <>
-            <HeroSection />
-            <Center />
-            <FeaturesSection />
-            <BenefitsSection />
-            <FAQSection />
-            <CalEmbed />
-            <Footer />
-          </>
-        } />
-        <Route path="/demo" element={<DemoForm />} />
+        {/* Home Page (and other pages) show the Navbar */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <HeroSection />
+              <Center />
+              <FeaturesSection />
+              <BenefitsSection />
+              <FAQSection />
+              <CalEmbed />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Demo Page hides the Navbar */}
+        <Route
+          path="/demo"
+          element={
+            <>
+              {/* No Navbar here */}
+              <DemoForm />
+            </>
+          }
+        />
+
+        {/* Add more routes as needed, decide if they show Navbar or not */}
       </Routes>
     </Router>
   );
