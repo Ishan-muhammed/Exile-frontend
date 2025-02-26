@@ -27,6 +27,8 @@ body {
   background-color: rgba(34, 34, 34, 0.37);
   border: 1px solid rgba(92, 92, 92, 0.121);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  
 }
 
 /* Logo */
@@ -84,6 +86,26 @@ body {
 
 /* ----------- Responsive  ----------- */
 @media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+
+  /* The hamburger will appear second (order: 2),
+     and the CTA button will appear first (order: 1). */
+  .hamburger {
+    order: 2;
+  }
+
+  .nav-cta {
+    order: 1;
+  }
+
+  /* If your nav links are also in the same row,
+     you may need to set order for them too (e.g. order: 3). */
+  .nav-links {
+    order: 3;
+  }
   /* Show hamburger icon on mobile */
   .hamburger {
     display: block;
