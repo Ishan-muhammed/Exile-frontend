@@ -14,7 +14,6 @@ const DemoForm = () => {
   // Handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Typically, you’d send data to your backend or an API endpoint here
     const formData = {
       name,
       email,
@@ -24,9 +23,31 @@ const DemoForm = () => {
       whatsappNumber,
       phoneNumber,
     };
-    console.log("Form submitted:", formData);
-    
-    // Reset form or show success message if desired
+
+    // Post the form data to your Google Apps Script Web App
+    fetch("https://script.google.com/macros/s/AKfycby1ibqSBlU4GDd4ojlHNZ06rqIU1IfGk30MUtcLGotVi-7Sb7gNNkTuAA2KZ7s-ACpLjg/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result === "success") {
+          console.log("Form submitted successfully!", data);
+          // Optionally, show a success message to the user here
+        } else {
+          console.error("Error submitting form:", data.error);
+          // Optionally, show an error message to the user here
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Optionally, show an error message to the user here
+      });
+
+    // Reset form fields
     setName("");
     setEmail("");
     setBusinessName("");
@@ -40,8 +61,8 @@ const DemoForm = () => {
     <div className="demo-form-container">
       <h1>Test Out Our AI Facilitators Right Now.</h1>
       <p>
-        It’s time for the Future, it’s time for you to enhance your business with 
-        revolutionary, extraordinary technology. Welcome to  Exile Automate
+        It’s time for the Future, it’s time for you to enhance your business with
+        revolutionary, extraordinary technology. Welcome to Exile Automate
       </p>
       <form onSubmit={handleSubmit} className="demo-form">
         <label>Name</label>
