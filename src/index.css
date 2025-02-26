@@ -20,15 +20,13 @@ body {
   top: 0;
   width: 100%;
   z-index: 999;
-  display: flex;
+  display: flex;                /* Flex layout */
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: rgba(34, 34, 34, 0.37);
   border: 1px solid rgba(92, 92, 92, 0.121);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  
 }
 
 /* Logo */
@@ -84,34 +82,31 @@ body {
   background-color: #04c971;
 }
 
-/* ----------- Responsive  ----------- */
+/* ----------- Responsive (Mobile) ----------- */
 @media (max-width: 768px) {
+  /* Ensure navbar is still a flex container */
   .navbar {
     display: flex;
     align-items: center;
   }
 
-  /* The hamburger will appear second (order: 2),
-     and the CTA button will appear first (order: 1). */
-  .hamburger {
-    order: 2;
-  }
-
+  /* Swap the order on mobile:
+     - CTA button first (order: 1)
+     - Hamburger second (order: 2)
+     - Nav links last (order: 3)
+  */
   .nav-cta {
     order: 1;
   }
-
-  /* If your nav links are also in the same row,
-     you may need to set order for them too (e.g. order: 3). */
+  .hamburger {
+    display: block;
+    order: 2;
+  }
   .nav-links {
     order: 3;
   }
-  /* Show hamburger icon on mobile */
-  .hamburger {
-    display: block;
-  }
 
-  /* Hide the nav links row by default */
+  /* Nav Links become a dropdown */
   .nav-links {
     position: absolute;
     top: 70px; /* just below the navbar */
@@ -125,18 +120,14 @@ body {
     transform: translateY(-150%);
   }
 
-  /* When .open is applied, slide down the menu */
+  /* Slide down when .open is applied */
   .nav-links.open {
     transform: translateY(0);
   }
 
+  /* Mobile link styles */
   .nav-links li a {
-    color: #fff; /* mobile link color */
+    color: #fff;
     font-size: 1rem;
   }
-
-  /* Remove or comment out this rule to ensure the CTA button stays visible */
-  /* .nav-cta {
-    display: none;
-  } */
 }
