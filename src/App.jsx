@@ -8,7 +8,7 @@ import BenefitsSection from "./components/BenefitsSection";
 import FAQSection from "./components/FAQSection";
 import CalEmbed from "./components/CalEmbed";
 import Footer from "./components/Footer";
-import DemoForm from "./components/DemoForm";
+import DemoForm from "./components/Freedemo";
 
 function App() {
   return (

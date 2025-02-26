@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./DemoForm.css"; // We'll create a CSS file for styling
+import "./Freedemo.css"; // We'll create a CSS file for styling
 
 const DemoForm = () => {
   // Local state for each form field
