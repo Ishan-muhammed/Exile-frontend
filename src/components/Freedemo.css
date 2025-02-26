@@ -1,54 +1,78 @@
 .demo-form-container {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem;
-    max-width: 600px;
-    margin: 2rem auto;
-    border-radius: 8px;
-    text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.demo-form-container h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.demo-form-container p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.demo-form label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.demo-form input,
+.demo-form select {
+  padding: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: #fff;
+}
+
+.demo-form button {
+  background-color: #ff0044;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.demo-form button:hover {
+  background-color: #cc0033;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .demo-form-container {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
   }
-  
+
   .demo-form-container h1 {
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
-  
+
   .demo-form-container p {
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #ccc;
+    font-size: 0.9rem;
   }
-  
-  .demo-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .demo-form label {
-    text-align: left;
-    font-weight: bold;
-  }
-  
+
   .demo-form input,
   .demo-form select {
-    padding: 0.8rem;
-    border-radius: 4px;
-    border: 1px solid #444;
-    background-color: #222;
-    color: #fff;
+    padding: 0.7rem;
   }
-  
+
   .demo-form button {
-    background-color: #ff0044;
-    color: #fff;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 0.7rem 1rem;
   }
-  
-  .demo-form button:hover {
-    background-color: #cc0033;
-  }
-  
+}
