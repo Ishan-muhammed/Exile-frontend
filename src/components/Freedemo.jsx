@@ -25,7 +25,7 @@ const DemoForm = () => {
     };
 
     // Post the form data to your Google Apps Script Web App
-    fetch("https://script.google.com/macros/s/AKfycby1ibqSBlU4GDd4ojlHNZ06rqIU1IfGk30MUtcLGotVi-7Sb7gNNkTuAA2KZ7s-ACpLjg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzWuKQI65ZeKwq9E5SBCvqyfPZf6trjK7S7KtyGvq9N_ewogy-Jc7XdfZS6qdS94qEegw/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const DemoForm = () => {
           <option value="">Select an Option</option>
           <option value="Google">Google</option>
           <option value="Social Media">Social Media</option>
-          <option value="Referral">Referral</option>
+          <option value="Referral">Youtube</option>
           <option value="Other">Other</option>
         </select>
 
