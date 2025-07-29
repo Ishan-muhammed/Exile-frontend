@@ -1,94 +1,64 @@
-/* 1) The overall container with a dark background */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 .cal-container {
-  background-color: #070707; /* Black background */
-  min-height: 200px;      /* You can remove or reduce further if needed */
-  padding: 40px 20px;     
-  margin-bottom: 95px;/* Reduced from 60px 20px */
+  /* Changed background from dark to light */
+  background-color: #f6f7f8; /* Set to your desired light background */
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* 2) Header row: "Let's Connect" (left) & text (right) */
 .cal-header {
-  max-width: 1200px;
-  margin: 60px auto 60px auto; /* Reduced from 100px auto 70px auto */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.cal-header-left h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #c8c8c8;
-  margin-bottom:70px;
+.cal-header-left-heading {
+  font-size: 45px;
+  color: #333; /* Changed to dark text */
+  margin-bottom: 20px;
 }
 
-.cal-header-right {
-  max-width: 400px;
-  text-align: right;
-  color: #c8c8c8;
-  font-size: 16px;
-  margin-top: 40px; /* Reduced from 110px */
+.cal-header-right-para {
+  font-size: 1.2rem;
+  color: #555; /* Changed to medium-dark text */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
-/* Highlight color for "Connect" */
-.highlight {
-  color: #04c971;
-}
-
-/* 3) The main card containing the Cal.com embed */
 .cal-box {
-  background-color: rgba(26, 26, 26, 0.438);
-  border: 1px solid rgba(255, 255, 255, 0.123);
-  border-radius: 8px;
-  width: 100%;
-  height: 800px;
+  max-width: 900px;
+  height: 700px; /* Keep original height for the embed */
   margin: 0 auto;
-  padding: 30px; /* Reduced from 40px */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 12px;
+  /* Added subtle shadow and explicit background for the iframe container */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff; /* White background for the embed box */
 }
 
-/* 4) The Cal.com iframe itself */
 .cal-iframe {
-  margin-top: 50px; /* Reduced from 80px */
-  border: none;
   width: 100%;
-  height: 600px;
-  border-radius: 6px;
+  height: 100%;
+  border: none;
+  /* Note: The Calendly embed itself might still render with a dark theme
+     if it's configured that way within Calendly. You may need to check
+     your Calendly embed settings for a light theme option if it still appears dark. */
 }
 
-/* Responsive Styles for Mobile Devices */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .cal-container {
-    padding: 30px 10px; /* Reduced from 40px 10px */
-    min-height: auto;   /* Let content determine height */
+  .cal-header-left-heading {
+    font-size: 32px;
   }
-
-  .cal-header {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 30px;  /* Reduced from 50px */
-    margin-bottom: 30px; /* Reduced from 40px */
+  .cal-header-right-para {
+    font-size: 1rem;
   }
-
-  .cal-header-left h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .cal-header-right {
-    font-size: 14px;
-    margin-top: 0;
-  }
-
   .cal-box {
-    height: auto;
-    padding: 20px;
-    margin-top: 20px;
-  }
-
-  .cal-iframe {
-    margin-top: 20px;
-    height: 400px; /* Shorter iframe on mobile */
+    height: 600px; /* Adjust height for mobile */
   }
 }

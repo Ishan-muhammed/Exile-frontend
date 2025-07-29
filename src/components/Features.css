@@ -9,17 +9,17 @@
 .features-section {
   width: 100%;
   padding: 90px 20px;
-  background: radial-gradient(circle at center, #07230a 20%, #000 80%);
-  /* Remove the flex here so the grid can properly center on mobile
-  display: flex;
-  justify-content: center; 
-  */
+  /* Changed background from dark gradient to light color */
+  background-color: #f6f7f8; /* Light background for the section */
+  /* Remove the flex here so the grid can properly center on mobile */
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .features-section h2 {
   font-size: 45px;
   text-align: center;
-  color: #fff;
+  color: #333; /* Changed to dark text */
   margin-bottom: 40px;
 }
 
@@ -43,9 +43,12 @@
 /* Feature Box Styles */
 .feature-box {
   position: relative;
-  background-color: rgba(34, 34, 34, 0.468);
-  border: 1px solid rgba(92, 92, 92, 0.121);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /* Changed background from dark transparent to light */
+  background-color: #ffffff; /* White background for the cards */
+  /* Changed border from dark transparent to light subtle */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle light border */
+  /* Adjusted box shadow for light theme */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -56,27 +59,30 @@
 
 .feature-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Adjusted hover box shadow for light theme */
+  box-shadow: 0 0 10px 2px rgba(4, 201, 113, 0.3), 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle green glow with darker shadow */
 }
 
-/* Image styling */
+/* Image styling - Reverted to original dimensions but with object-fit */
 .feature-box img {
   width: 100%;
-  height: 300px; /* Desktop height */
+  height: 300px; /* Desktop height - kept from original */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
+  /* Note: The image content itself still has a dark background as per image_f9a06f.png.
+     For a truly light feel, these images (multilngualy.jpg, etc.) need to be replaced with light-themed visuals. */
 }
 
 .feature-box h3 {
   font-size: 24px;
+  color: #111; /* Changed to very dark text */
   margin-bottom: 20px;
-  color: #c8c8c8;
 }
 
 .feature-box p {
   font-size: 16px;
-  color: #c8c8c8;
+  color: #555; /* Changed to medium-dark text */
 }
 
 /* Box sizing for grid layout */
@@ -97,7 +103,7 @@
   justify-content: center;
 }
 
-/* Grid area assignment */
+/* Grid area assignment - KEEP AS IS */
 .small-box:nth-child(1) { grid-area: small1; }
 .small-box:nth-child(2) { grid-area: small2; }
 .large-box             { grid-area: large; }

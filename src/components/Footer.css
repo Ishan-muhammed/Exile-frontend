@@ -1,20 +1,21 @@
-/* 1) Ensure the entire page is dark */
-html, body {
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Footer container */
+.footer {
   background-color: #000;
+  color: #fff;
   font-family: "Poppins", sans-serif;
+  padding: 60px 40px 40px 40px;
 }
 
-/* 2) Footer container */
-.footer {
-  min-height: 250px;
+/* Main footer content */
+.footer-main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: radial-gradient(circle at bottom, #072109 20%, #000 80%);
-  padding: 40px 20px;
-  color: #f2f2f2;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333;
 }
 
 /* Left section */
@@ -25,93 +26,59 @@ html, body {
 }
 
 .footer-logo {
-  width: 120px;
-  margin-top: 20px;
+  width: 180px;
+  margin-bottom: 30px;
 }
 
-.footer-copy {
-  font-size: 0.9rem;
-  margin-top: 20px;
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0) invert(1); /* Makes logo white if it's dark */
 }
 
-/* Center links */
-.footer-center {
-  display: flex;
-  align-items: center;
-}
-
-.footer-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-links li a {
-  text-decoration: none;
-  color: #f2f2f2;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-.footer-links li a:hover {
-  color: #04c971;
-}
-
-/* Right section */
-.footer-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-/* 3) Social icons container */
+/* Social icons container */
 .social-icons {
   display: flex;
-  gap: 20px;
-  margin-bottom: 25px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-/* Each link: white circle with a subtle glow even before hover */
 .social-icons a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background-color: #fff;  /* White background */
-  border: 1px solid #ccc;  /* Subtle gray border */
+  background-color: #222;
+  border: 1px solid #444;
   text-decoration: none;
   transition: all 0.3s ease;
-  /* Subtle default glow */
-  box-shadow: 0 0 8px 2px rgba(4, 201, 113, 0.3);
 }
 
-/* Icon inside the circle */
 .social-icons img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes icons white */
 }
 
-/* Hover effect: intensify glow, slightly lift & enlarge */
 .social-icons a:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 0 10px 2px #04c971, 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #333;
+  transform: translateY(-2px);
+  border-color: #666;
 }
 
 /* Footer email text */
 .footer-email {
-  margin-top: 50px;
   font-size: 0.9rem;
+  color: #ccc;
   margin: 0;
 }
 
 .footer-email a {
-  color: #66a3ff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -119,25 +86,103 @@ html, body {
   text-decoration: underline;
 }
 
-/* 4) Responsive layout for smaller screens */
-@media (max-width: 768px) {
+/* Right section - Navigation links */
+.footer-right {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+/* Bottom section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.footer-info {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* Responsive layout */
+@media (max-width: 968px) {
   .footer {
+    padding: 40px 20px 30px 20px;
+  }
+  
+  .footer-main {
     flex-direction: column;
-    align-items: center;
+    gap: 40px;
+  }
+  
+  .footer-right {
+    gap: 40px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
   }
   
-  .footer-left,
+  .footer-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
   .footer-right {
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 30px;
   }
   
-  .footer-center {
-    margin-bottom: 20px;
+  .footer-logo {
+    width: 150px;
   }
   
-  .footer-links {
-    justify-content: center;
+  .social-icons {
+    justify-content: flex-start;
   }
 }

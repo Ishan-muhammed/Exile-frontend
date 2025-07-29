@@ -1,0 +1,263 @@
+/* Main section - dual row horizontal scrolling */
+.infinite-voice-section {
+    padding: 80px 20px;
+    background-color: #f6f7f8;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Center content wrapper */
+.voice-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between rows */
+}
+
+/* Outer wrapper with fade overlays - horizontal */
+.voices-outer-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+
+}
+
+/* Moving container - horizontal flex */
+.voices-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    will-change: transform;
+    width: fit-content;
+    height: 100%;
+    transition: transform 0.1s ease-out;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Actual voice box row - horizontal layout */
+.voice-strip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+/* Voice container - horizontal spacing */
+.voice-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 430px;
+}
+
+/* Voice box styles */
+.voice-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 410px;
+    height: 190px; 
+    font-family: "Inter", sans-serif;
+    color: #111;
+    margin: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for voice box - VISUAL FEEDBACK FOR HOVER */
+.voice-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.voice-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.voice-gender,
+.voice-accent {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.audio-player {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.voice-play-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #222;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.voice-play-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.voice-timer {
+    font-size: 0.85rem;
+    color: #333;
+    width: 80px;
+    text-align: left;
+}
+
+.voice-progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: #05b867;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.voice-progress {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.1s linear;
+    background-color: #05b867;
+    position: relative;
+}
+
+/* White thumb at the end of progress */
+.voice-progress:after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+
+/* Show thumb only on hover over the entire voice box */
+.voice-box:hover .voice-progress:after {
+    opacity: 1;
+}
+
+/* Scale effect when hovering over progress bar specifically */
+.voice-progress-bar:hover .voice-progress:after {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade overlays - left/right for horizontal */
+.fade-left,
+.fade-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fade-left {
+    left: 0;
+    background: linear-gradient(to right, #f6f7f8 0%, transparent 100%);
+}
+
+.fade-right {
+    right: 0;
+    background: linear-gradient(to left, #f6f7f8 0%, transparent 100%);
+}
+
+/* Responsive tweaks for dual row layout */
+@media (max-width: 768px) {
+    .voice-container {
+        width: 350px;
+    }
+    
+    .fade-left,
+    .fade-right {
+        width: 100px;
+    }
+    
+    .infinite-voice-section {
+        padding: 40px 10px;
+    }
+    
+    .voices-outer-wrapper {
+        height: 250px;
+    }
+    
+    .voice-wrapper {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .voice-container {
+        width: 300px;
+    }
+    
+    .fade-left,
+    .fade-right {
+        width: 80px;
+    }
+    
+    .voice-box {
+        padding: 25px;
+        height: 170px;
+    }
+    
+    .voices-outer-wrapper {
+        height: 220px;
+    }
+    
+    .voice-strip {
+        gap: 20px;
+    }
+    
+    .voice-wrapper {
+        gap: 20px;
+    }
+    
+    .infinite-voice-section {
+        padding: 20px 10px;
+    }
+}
+
+/* Additional styles for better visual separation */
+@media (min-width: 769px) {
+    .voice-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Ensure smooth performance for animations */
+.voices-container {
+    backface-visibility: hidden;
+    perspective: 1000px;
+}

@@ -1,10 +1,12 @@
-/* Outer wrapper: black background for the entire FAQ section */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Outer wrapper: light background for the entire FAQ section */
 .faq-section {
-  background-color: #000000; 
+  background-color: #f6f7f8; /* Changed to your desired light background */
   padding: 60px 20px;
   font-family: "Poppins", sans-serif;
-  color: #f8f8f8;
-  min-height: 800px;
+  color: #333; /* Default text color for the section */
+  min-height: 400px; /* Reduced from 600px */
 }
 
 /* The single transparent box that holds title + Q&A side by side */
@@ -12,40 +14,49 @@
   margin-top: 50px;
   display: flex;
   align-items: flex-start;
-  /* Using a radial gradient for a dynamic dark look */
-  background: radial-gradient(circle at center, #07230a 20%, #000 80%);
-  border: 1px solid rgba(255, 255, 255, 0.123);
+  /* Changed from dark radial gradient to light background */
+  background-color: #ffffff; /* White background for the main FAQ box */
+  /* Changed border from dark transparent to light subtle */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle light border */
   border-radius: 8px;
   padding: 30px;
   max-width: 1200px;
-  min-height: 900px;
+  min-height: 500px; /* Reduced from 900px */
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
 }
 
 /* Title on the left */
 .faq-title {
   font-size: 2.5rem;
   line-height: 1.2;
-  color: #e4e4e4;
+  color: #111; /* Changed to very dark text */
   margin-right: 40px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
+/* Green color for "Frequently" text */
+.frequently-text {
+  color: #05b867;
+}
+
 /* Q&A container on the right */
 .faq-container {
-  max-width: 600px;
+  max-width: 600px; /* Keep original max-width */
   margin-top: 30px;
   margin-left: auto;
 }
 
 /* FAQ Item styling */
 .faq-item {
-  background-color: rgba(26, 26, 26, 0.479);
+  /* Changed background from dark transparent to light */
+  background-color: #f9f9f9; /* Slightly off-white for individual items */
   margin-bottom: 10px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.112);
+  /* Changed border from dark transparent to light subtle */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Even more subtle light border */
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -61,19 +72,26 @@
 }
 
 .faq-question:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.03); /* Light hover effect */
 }
 
 .faq-question h3 {
   font-size: 1.1rem;
   font-weight: 500;
   margin: 0;
+  color: #333; /* Changed to dark text */
 }
 
 /* + or - icon */
 .faq-icon {
   font-size: 1.5rem;
-  color: #f2f2f2;
+  color: #04c971; /* Keep green accent for icon */
+  transition: transform 0.3s ease; /* Ensure smooth icon rotation */
+}
+
+/* Rotate icon when open */
+.faq-item.open .faq-icon {
+  transform: rotate(180deg); /* Rotate for open state */
 }
 
 /* Hidden answer container */
@@ -81,26 +99,32 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
-  padding: 0 20px;
-  background-color: transparent;
+  padding: 0 20px; /* Kept from original, ensures padding is only when open */
+  background-color: transparent; /* Keep transparent */
 }
 
 .faq-answer.show {
-  max-height: 300px;
-  padding: 20px;
+  max-height: 300px; /* Make sure this value is large enough for content */
+  padding: 20px; /* This padding will apply when shown */
 }
 
 .faq-answer p {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.4;
+  color: #555; /* Changed to medium-dark text */
 }
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
+  .faq-section {
+    min-height: 300px; /* Reduced for mobile */
+  }
+
   .faq-box {
     flex-direction: column;
     padding: 20px;
+    min-height: 400px; /* Reduced from auto for better mobile experience */
   }
   
   .faq-title {
@@ -126,10 +150,9 @@
   
     /* Only open when .show is added */
     .faq-answer.show {
-      padding: 15px;
-      max-height: 300px;
+      padding: 15px; /* Adjust padding for mobile */
+      max-height: 300px; /* Keep max-height for mobile */
      }
-  
   
   .faq-answer p {
     font-size: 0.9rem;

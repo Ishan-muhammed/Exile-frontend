@@ -1,0 +1,300 @@
+.best-seller-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }/* PricingSection.css */
+.pricing-section {
+  background-color: white;
+  padding: 60px 20px;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.pricing-header {
+  display: grid;
+  grid-template-columns: 300px repeat(3, 1fr);
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.feature-column {
+  padding: 20px 25px;
+  background-color: #f1f3f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove supported models title styles */
+
+.capability-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.plan-column {
+  padding: 20px 25px;
+  text-align: center;
+  position: relative;
+}
+
+.plan-header {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.plan-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Remove best seller badge styles */
+
+.unlock-button {
+  background-color: transparent;
+  border: 2px solid #05b867;
+  color: #05b867;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.unlock-button:hover {
+  background-color: #05b867;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hero-button {
+  background-color: #05b867;
+  border-color: #05b867;
+  color: white;
+}
+
+.hero-button:hover {
+  background-color: #049954;
+  border-color: #049954;
+  transform: translateY(-2px);
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 300px repeat(3, 1fr);
+}
+
+.feature-row {
+  display: contents;
+}
+
+.feature-name {
+  padding: 18px 25px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 500;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.feature-cell {
+  padding: 18px 25px;
+  border-bottom: 1px solid #e9ecef;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-mark {
+  font-size: 18px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-mark.enabled {
+  color: #05b867;
+  background-color: rgba(5, 184, 103, 0.1);
+}
+
+.check-mark.disabled {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 40px 15px;
+  }
+
+  .pricing-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .pricing-header {
+    display: block;
+  }
+
+  .feature-column {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .capability-title {
+    font-size: 14px;
+  }
+
+  .plan-column {
+    padding: 25px 20px;
+    border-bottom: 2px solid #e9ecef;
+  }
+
+  .plan-title {
+    font-size: 18px;
+  }
+
+  .unlock-button {
+    padding: 10px 25px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+
+  .features-grid {
+    display: block;
+  }
+
+  .feature-row {
+    display: block;
+    margin-bottom: 30px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .feature-name {
+    background-color: #f1f3f4;
+    padding: 15px 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    text-align: center;
+  }
+
+  .feature-cell {
+    display: inline-block;
+    width: 33.333%;
+    padding: 15px 10px;
+    border-bottom: none;
+    border-right: 1px solid #e9ecef;
+    box-sizing: border-box;
+  }
+
+  .feature-cell:last-child {
+    border-right: none;
+  }
+
+  .check-mark {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-section {
+    padding: 30px 10px;
+  }
+
+  .plan-title {
+    font-size: 20px;
+  }
+
+  .unlock-button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .feature-name {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .feature-cell {
+    padding: 12px 8px;
+  }
+
+  .check-mark {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .best-seller-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pricing-header {
+    grid-template-columns: 250px repeat(3, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: 250px repeat(3, 1fr);
+  }
+
+  .feature-column {
+    padding: 25px 20px;
+  }
+
+  .plan-column {
+    padding: 25px 15px;
+  }
+
+  .plan-title {
+    font-size: 20px;
+  }
+
+  .feature-name {
+    padding: 18px 20px;
+    font-size: 14px;
+  }
+
+  .feature-cell {
+    padding: 18px 15px;
+  }
+}

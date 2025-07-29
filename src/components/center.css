@@ -1,27 +1,27 @@
 .cntr-box {
-    /* Dark radial background, similar to Features section */
-    background: black;
-    position: relative;
-    min-height: 40vh; /* Make it flexible for mobile */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    color: #c8c8c8;
-  }
-  
-  /* Renamed class from .cntr-txt to .cntr-text for consistency */
+  /* Changed background to match the light theme */
+  background-color: #f6f7f8; /* Directly set the light background color */
+  position: relative;
+  min-height: 40vh; /* Make it flexible for mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  /* Removed the 'color' property from here, as we'll set it specifically on h1 */
+}
+
+/* This applies to the text within .cntr-text */
+.cntr-text h1 {
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #333; /* Explicitly setting the text color to dark for readability */
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
   .cntr-text h1 {
-    font-weight: 500;
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 32px; /* Scale down on mobile */
   }
-  
-  /* Responsive font sizes */
-  @media (max-width: 768px) {
-    .cntr-text h1 {
-      font-size: 32px; /* Scale down on mobile */
-    }
-  }
-  
+}

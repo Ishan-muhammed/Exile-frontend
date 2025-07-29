@@ -1,0 +1,126 @@
+@import "@fontsource/poppins";
+
+/* Main section */
+.integrations-section {
+    padding: 80px 20px;
+    background-color: #f6f7f8;
+    text-align: center;
+}
+  
+/* Center content wrapper */
+.integration-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+   
+/* Section heading - REDUCED GAP */
+.integrations-section h3 {
+    font-size: 24px; /* Reduced font size using pixels */
+    color: #333;
+    margin-bottom: 60px !important; /* Updated to your 60px */
+    font-weight: 420 !important; 
+}
+
+/* Green highlight for the number */
+.green-text {
+    color: #05b867;
+    font-weight: 600;
+}
+  
+/* Responsive tweaks */
+
+  
+/* Outer wrapper with fade overlays */
+.logos-outer-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+  
+/* Moving container */
+.logos-container {
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
+}
+  
+/* Actual logo row */
+.logo-strip {
+    display: flex;
+    align-items: center;
+}
+  
+/* Logo container - uniform size for all logos */
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 140px;
+    margin: 0 20px;
+    flex-shrink: 0;
+    /* Optional: subtle background for debugging */
+    /* background: rgba(0,0,0,0.02); */
+    /* border-radius: 8px; */
+}
+
+/* Logo image - fits within container */
+.integration-logo {
+    max-height: 60px;
+    max-width: 120px;
+    object-fit: contain;
+    object-position: center;
+    filter: grayscale(0.2);
+    transition: filter 0.3s ease;
+}
+
+/* Optional hover effect */
+.logo-container:hover .integration-logo {
+    filter: grayscale(0);
+}
+  
+/* Fade overlays */
+.fade-left,
+.fade-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    pointer-events: none;
+    z-index: 2;
+}
+  
+.fade-left {
+    left: 0;
+    background: linear-gradient(to right, #f6f7f8 0%, transparent 100%);
+}
+  
+.fade-right {
+    right: 0;
+    background: linear-gradient(to left, #f6f7f8 0%, transparent 100%);
+}
+  
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .integrations-section h3 {
+        font-size: 16px; /* Reduced font size for mobile using pixels */
+        margin-bottom: 20px; /* Updated to your 20px for mobile */
+    }
+    
+    .logo-container {
+        height: 60px;
+        width: 100px;
+        margin: 0 10px;
+    }
+    
+    .integration-logo {
+        max-height: 40px;
+        max-width: 80px;
+    }
+  
+    .fade-left,
+    .fade-right {
+        width: 50px;
+    }
+}

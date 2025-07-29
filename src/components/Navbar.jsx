@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Link might not be strictly necessary if using anchor tag for external link
 import log from "./Images/ngreen.png";
 import "../index.css";
 
@@ -25,14 +25,21 @@ function Navbar() {
         <li><a href="#features">Features</a></li>
         <li><a href="#benefits">Benefits</a></li>
         <li><a href="#faq">FAQ</a></li>
+        {/* The "Contact Us" link already points to CalEmbed, which is good */}
         <li><a href="#calEmbed">Contact Us</a></li>
       </ul>
 
-      {/* CTA Button */}
+      {/* CTA Button - Updated */}
       <div className="nav-cta">
-        <Link to="/demo" className="btn-cta">
-          Free Demo Call
-        </Link>
+        {/* Replaced Link with a standard anchor tag for external link */}
+        <a 
+          href="https://cal.com/exile-automate-vvgfkw/ai-voice-agent-discovery-call"
+          target="_blank"
+          rel="noopener noreferrer" 
+          className="btn-cta" // Keep existing styling class
+        >
+          Book A Call
+        </a>
       </div>
     </nav>
   );

@@ -4,13 +4,19 @@ import { faqData } from "./faqData";
 import "./FAQSection.css";
 
 const FAQSection = () => {
+  // Limit to first 4 FAQ items
+  const limitedFaqData = faqData.slice(0, 4);
+
   return (
     <section id="faq" className="faq-section">
       {/* Wrap title + FAQ in one box */}
       <div className="faq-box">
-        <h2 className="faq-title">Frequently <br /> Asked Questions</h2>
+        <h2 className="faq-title">
+          <span className="frequently-text">Frequently</span> <br /> 
+          Asked Questions
+        </h2>
         <div className="faq-container">
-          {faqData.map((item, index) => (
+          {limitedFaqData.map((item, index) => (
             <FAQItem key={index} item={item} />
           ))}
         </div>

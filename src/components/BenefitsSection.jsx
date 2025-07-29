@@ -1,54 +1,64 @@
 import React from "react";
-import full from "./Images/phone.jpg";
-import mon from "./Images/money.jpg";
-import sca from "./Images/scale.jpg";
-import sta from "./Images/star.jpg";
 import "./BenefitsSection.css";
+
+// Import your images
+import instantRepliesImage from "./Images/24 hr.png";
+import savesTimeImage from "./Images/time saving .png";
+import worksWithSystemsImage from "./Images/works with your existing system.png";
+import youOwnAgentImage from "./Images/you fully own the agent.png";
+
+const benefitsData = [
+  {
+    image: instantRepliesImage,
+    title: "Instant replies, 24/7",
+    description:
+      "Deliver instant, multilingual support to guests, day or night. Our AI handles 10 calls at once, providing seamless, perfect service and capturing every lead.",
+  },
+  {
+    image: savesTimeImage,
+    title: "Saves time for your team",
+    description:
+      "By expertly handling repetitive incoming calls, our AI receptionist frees your team to focus on direct guest engagement, upselling, or other crucial tasks that truly need a human..",
+  },
+  {
+    image: worksWithSystemsImage,
+    title: "Works with your existing systems",
+    description:
+      "Our AI receptionist integrates seamlessly with your existing hotel systems like PMS, CRS, and other systems. It easily integrates,automating your workflow without manual work..",
+  },
+  {
+    image: youOwnAgentImage,
+    title: "Actionable Insights & Reporting",
+    description:
+      "Our AI provides detailed reports, call recordings, call patterns, guest inquiries, and peak times. Access this data instantly from your dashboard to make smarter decisions..",
+  },
+];
 
 const BenefitsSection = () => {
   return (
-    <section id="benefits" className="benefits-section">
+    <section className="benefits-section">
       <div className="benefits-container">
-        <h1 className="benefits-heading">Benefits</h1>
-        <h2>
-          Reduce staffing costs, boost bookings, and provide 24/7 guest care with our AI.
-          Automate reservations, handle inquiries instantly, and enhance guest satisfaction
-          with seamless, human-like interactions. Enjoy scalable, consistent service that ensures 
-          every guest feels valued—day or night.
+        <h2 className="benefits-heading">
+          What you get with Exile Automate
         </h2>
+        <p className="benefits-subheading">
+        Free up your front desk. Our AI receptionist handles every call. That means no missed opportunities, happier guests, and more revenue for your hotel..
+        </p>
 
-        <div className="benefits-list">
-          <div className="benefit-item">
-            <h3 className="benefit-title">
-              <span>Lower staffing </span>
-              <span>costs</span>
-            </h3>
-            <img src={mon} alt="money" />
-          </div>
-
-          <div className="benefit-item">
-            <h3 className="benefit-title">
-              <span>Enhanced guest </span>
-              <span>satisfaction</span>
-            </h3>
-            <img src={sta} alt="star" />
-          </div>
-
-          <div className="benefit-item">
-            <h3 className="benefit-title">
-              <span>24/7 Guest </span>
-              <span>support</span>
-            </h3>
-            <img src={full} alt="24/7 support" />
-          </div>
-
-          <div className="benefit-item">
-            <h3 className="benefit-title">
-              <span>Limitless </span>
-              <span>scalability</span>
-            </h3>
-            <img src={sca} alt="scale" />
-          </div>
+        <div className="benefits-grid">
+          {benefitsData.map((benefit, index) => (
+            <div key={index} className="benefit-card">
+              <div className="benefit-icon-wrapper">
+                <img
+                  src={benefit.image}
+                  alt={benefit.title}
+                  className="benefit-icon"
+                />
+              </div>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

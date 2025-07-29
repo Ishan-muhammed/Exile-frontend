@@ -1,0 +1,212 @@
+/* HeroSection.css */
+.aliyah-section {
+    background: linear-gradient(135deg, #05b867 0%, #00a652 100%);
+    padding: 80px 20px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .hero-text {
+    color: white;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hero-subtitle {
+    font-weight: 400;
+    display: block;
+  }
+  
+  /* Audio Player Styles */
+  .audio-player {
+    background: white;
+    border-radius: 50px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .play-button {
+    background: #05b867;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  .play-button:hover {
+    background: #049954;
+    transform: scale(1.05);
+  }
+  
+  .progress-container {
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #05b867 0%, #00a652 100%);
+    border-radius: 3px;
+    transition: width 0.1s ease;
+  }
+  
+  /* Features Button */
+  .features-button {
+    background: white;
+    color: #05b867;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .features-button:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hero Image */
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .aaliya-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 60px 20px;
+      min-height: 500px;
+    }
+  
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+  
+    .hero-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  
+    .audio-player {
+      padding: 12px 20px;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+  
+    .play-button {
+      width: 45px;
+      height: 45px;
+    }
+  
+    .features-button {
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+  
+    .aaliya-image {
+      max-width: 350px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section {
+      padding: 40px 15px;
+    }
+  
+    .hero-title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+  
+    .audio-player {
+      padding: 10px 15px;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+  
+    .play-button {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .features-button {
+      padding: 10px 25px;
+      font-size: 15px;
+    }
+  
+    .aaliya-image {
+      max-width: 280px;
+    }
+  }
+  
+  /* Tablet Design */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content {
+      gap: 40px;
+    }
+  
+    .hero-title {
+      font-size: 42px;
+    }
+  
+    .aaliya-image {
+      max-width: 400px;
+    }
+  }
