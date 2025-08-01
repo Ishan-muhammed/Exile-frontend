@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
-// Import Firebase modules
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import React, { useState } from "react";
+import {
+  initializeApp
+} from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp
+} from "firebase/firestore";
 import "./ContactForm.css";
 
 // Firebase configuration
@@ -12,7 +18,7 @@ const firebaseConfig = {
   storageBucket: "exile-website-form.firebasestorage.app",
   messagingSenderId: "694977584802",
   appId: "1:694977584802:web:9278956b24295d5b2d01fb",
-  measurementId: "G-4W92L5Z3J5"
+  measurementId: "G-4W92L5Z3J5",
 };
 
 // Initialize Firebase
@@ -21,127 +27,139 @@ const db = getFirestore(app);
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
-  
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
+  const [submitStatus, setSubmitStatus] = useState({ message: "", type: "" });
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = async () => {
-    // Validate form
-    if (!formData.name || !formData.email || !formData.message) {
-      setSubmitStatus('Please fill in all fields.');
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { name, email, message } = formData;
+
+    if (!name || !email || !message) {
+      setSubmitStatus({
+        message: "Please fill in all fields.",
+        type: "error",
+      });
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitStatus('');
+    setSubmitStatus({ message: "", type: "" });
 
     try {
-      // Add document to Firestore
-      await addDoc(collection(db, 'contact-messages'), {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
+      await addDoc(collection(db, "contact-messages"), {
+        name,
+        email,
+        message,
         timestamp: serverTimestamp(),
-        status: 'new'
+        status: "new",
       });
 
-      setSubmitStatus('Message sent successfully! We\'ll get back to you soon.');
-      
-      // Reset form
+      setSubmitStatus({
+        message: "Message sent successfully! We'll get back to you soon.",
+        type: "success",
+      });
+
       setFormData({
-        name: '',
-        email: '',
-        message: ''
+        name: "",
+        email: "",
+        message: "",
       });
     } catch (error) {
-      console.error('Error sending message:', error);
-      setSubmitStatus('Error sending message. Please try again.');
+      console.error("Error sending message:", error);
+      setSubmitStatus({
+        message: "Failed to send message. Please try again.",
+        type: "error",
+      });
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="contact-form-section">
+    <section className="contact-form-section" id="contact">
       <div className="contact-form-container">
-        {/* Header */}
         <div className="contact-us-label">CONTACT US</div>
         <h1 className="contact-heading">Send us a message</h1>
-        
-        {/* Form */}
-        <div className="contact-form">
-          {/* Name Field */}
+
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Name</label>
+            <label htmlFor="name">Full Name</label>
             <input
               type="text"
+              id="name"
               name="name"
               value={formData.name}
-              onChange={handleInputChange}
-              placeholder="Full Name"
+              onChange={handleChange}
+              placeholder="Enter your full name"
+              required
             />
           </div>
-          
-          {/* Email Field */}
+
           <div className="form-group">
-            <label>Email</label>
+            <label htmlFor="email">Email Address</label>
             <input
               type="email"
+              id="email"
               name="email"
               value={formData.email}
-              onChange={handleInputChange}
-              placeholder="email@gmail.com"
+              onChange={handleChange}
+              placeholder="example@gmail.com"
+              required
             />
           </div>
-          
-          {/* Message Field */}
+
           <div className="form-group">
-            <label>How can we help you?</label>
+            <label htmlFor="message">How can we help you?</label>
             <textarea
+              id="message"
               name="message"
               value={formData.message}
-              onChange={handleInputChange}
+              onChange={handleChange}
               placeholder="Tell us how we can assist you..."
               rows="6"
+              required
             />
           </div>
-          
-          {/* Status Message */}
-          {submitStatus && (
-            <div className={`status-message ${
-              submitStatus.includes('successfully') ? 'status-success' : 'status-error'
-            }`}>
-              {submitStatus}
+
+          {submitStatus.message && (
+            <div
+              className={`status-message ${
+                submitStatus.type === "success"
+                  ? "status-success"
+                  : "status-error"
+              }`}
+            >
+              {submitStatus.message}
             </div>
           )}
-          
-          {/* Submit Button */}
+
           <button
-            onClick={handleSubmit}
-            disabled={isSubmitting}
+            type="submit"
             className="submit-button"
+            disabled={isSubmitting}
             style={{
               opacity: isSubmitting ? 0.6 : 1,
-              cursor: isSubmitting ? 'not-allowed' : 'pointer'
+              cursor: isSubmitting ? "not-allowed" : "pointer",
             }}
           >
-            {isSubmitting ? 'Sending...' : 'Submit'}
+            {isSubmitting ? "Sending..." : "Submit"}
           </button>
-        </div>
+        </form>
       </div>
-    </div>
+    </section>
   );
 };
 

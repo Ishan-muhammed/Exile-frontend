@@ -58,22 +58,7 @@ const HeroSection = () => {
       });
 
       // To make sure only one line is visible at a time
-      // Initially hide all but the first one, or use CSS to hide them
       gsap.set(featureLines.slice(1), { opacity: 0, pointerEvents: "none" });
-
-      // Optional: Add a ScrollTrigger if you want this animation to only start when scrolled into view
-      // You already have a featuresRef, so you could add one here if needed,
-      // but typically cyclical animations like this start immediately.
-      // If you want it, uncomment and adjust:
-      /*
-      ScrollTrigger.create({
-        trigger: featuresRef.current,
-        start: "top center",
-        onEnter: () => tl.play(),
-        onLeaveBack: () => tl.reverse(), // Or tl.pause(0) to reset
-        // scrub: true, // If you want scroll-driven animation
-      });
-      */
     }
     // --- END NEW ANIMATION LOGIC ---
   }, []);
@@ -87,6 +72,14 @@ const HeroSection = () => {
     ));
   };
 
+  const handleScrollToAliyah = (e) => {
+    e.preventDefault(); // prevent link behavior
+    const target = document.getElementById("aliyah-intro");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="hero" ref={heroRef}>
       <div className="hero-content">
@@ -95,7 +88,6 @@ const HeroSection = () => {
         </h1>
 
         {/* New Animated Text */}
-        {/* We will manage the display of these lines purely with GSAP */}
         <div className="features-container" ref={featuresRef}>
           <div className="feature-line">24/7 Availability</div>
           <div className="feature-line">No Missed Calls</div>
@@ -106,13 +98,13 @@ const HeroSection = () => {
           Our AI answers calls 24/7, freeing your staff for essential tasks.
         </p>
 
+        {/* Scroll to Aliyah Intro Section */}
         <a
-          href="https://cal.com/exile-automate-vvgfkw/ai-voice-agent-discovery-call"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#aliyah-intro"
+          onClick={handleScrollToAliyah}
           className="btn-hero"
         >
-          Book A Call
+         Meet Our Aliyah
         </a>
       </div>
     </section>

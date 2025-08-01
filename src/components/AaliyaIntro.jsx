@@ -3,12 +3,10 @@ import "./AaliyaIntro.css";
 import { Play, Pause } from "lucide-react";
 import aliyahImage from "./Images/Aliayim.png"; // ✅ Image of Aliyah
 import aliyahSpeaking from "./Images/aliay sspeaking.wav"; // ✅ Audio file
-import { useNavigate } from "react-router-dom"; // ✅ For navigation
 
 const AaliyaIntro = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
-  const navigate = useNavigate(); // ✅ Hook for navigation
 
   const toggleAudio = () => {
     if (isPlaying) {
@@ -19,19 +17,28 @@ const AaliyaIntro = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const goToFeatures = () => {
-    navigate("/features"); // ✅ Navigate to Newproduct.jsx route
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <section className="aaliya-section">
-      {/* ✅ Heading with spacing */}
-      <h2 className="aaliya-heading">Meet our Aliyah</h2>
+    <section
+      id="aliyah-intro"
+      className="aaliya-section"
+      style={{ fontFamily: "Poppins, sans-serif" }}
+    >
+      {/* ✅ Heading */}
+      <h2 className="aaliya-heading">
+        Meet Our New <span className="green-text">AI Receptionist Aliyah</span>
+      </h2>
 
       <div className="aaliya-box">
         <div className="aaliya-text">
           <h1>
-            I’m <span className="highlight">Aaliya.</span>
+            I'm <span className="highlight">Aliyah</span>
           </h1>
           <p>your AI receptionist</p>
 
@@ -50,8 +57,12 @@ const AaliyaIntro = () => {
             </div>
           </div>
 
-          {/* ✅ Navigation Button */}
-          <button className="features-btn" onClick={goToFeatures}>
+          {/* ✅ Features scroll button */}
+          <button
+            className="features-btn"
+            onClick={scrollToPricing}
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
             Features
           </button>
         </div>

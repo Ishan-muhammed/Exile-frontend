@@ -1,7 +1,7 @@
 .video-section {
   position: relative;
   width: 100%;
-  padding: 80px 20px; /* Add vertical padding for spacing */
+  padding:5px 20px; /* Add vertical padding for spacing */
   background-color: #f6f7f8; /* Light background to match the website theme */
   display: flex;
   align-items: center;

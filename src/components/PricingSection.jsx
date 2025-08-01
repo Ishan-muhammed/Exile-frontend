@@ -10,13 +10,14 @@ const PricingSection = () => {
       features: {
         'SMS Capabilities': false,
         'Email Integration': true,
-        'PMS Integratio':true,
+        'PMS Integration': true,
         'Voice Cloning': false,
+        '2+ Languages': false,
         '2+ Numbers': false,
         '2+ Facilitators': false,
         '1+ Abilities': false,
-        'Google Calendar Integration': true,
-        'Form Integration': true
+        'Call Analytics': true,
+        'CRM Integration': false,
       }
     },
     {
@@ -26,13 +27,14 @@ const PricingSection = () => {
       features: {
         'SMS Capabilities': true,
         'Email Integration': true,
-        'PMS Integration':true,
+        'PMS Integration': true,
         'Voice Cloning': false,
+        '2+ Languages': true,
         '2+ Numbers': false,
         '2+ Facilitators': true,
         '1+ Abilities': true,
-        'Google Calendar Integration': true,
-        'Form Integration': true
+        'Call Analytics': true,
+        'CRM Integration': true,
       }
     },
     {
@@ -42,13 +44,14 @@ const PricingSection = () => {
       features: {
         'SMS Capabilities': true,
         'Email Integration': true,
-        'CRM Integration': true,
+        'PMS Integration': true,
         'Voice Cloning': true,
+        '2+ Languages': true,
         '2+ Numbers': true,
         '2+ Facilitators': true,
         '1+ Abilities': true,
-        'Google Calendar Integration': true,
-        'Form Integration': true
+        'Call Analytics': true,
+        'CRM Integration': true,
       }
     }
   ];
@@ -56,17 +59,25 @@ const PricingSection = () => {
   const allFeatures = [
     'SMS Capabilities',
     'Email Integration',
-    'CRM Integration',
+    'PMS Integration',
     'Voice Cloning',
+    '2+ Languages',
     '2+ Numbers',
     '2+ Facilitators',
     '1+ Abilities',
-    'Google Calendar Integration',
-    'Form Integration'
+    'Call Analytics',
+    'CRM Integration',
   ];
 
+  const scrollToContactForm = () => {
+    const section = document.getElementById('contact');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="pricing-section">
+    <div className="pricing-section" id="pricing">
       <div className="pricing-container">
         {/* Header Row */}
         <div className="pricing-header">
@@ -77,8 +88,10 @@ const PricingSection = () => {
             <div key={index} className="plan-column">
               <div className="plan-header">
                 <h2 className="plan-title">{plan.title}</h2>
-
-                <button className={`unlock-button ${plan.isBestSeller ? 'hero-button' : ''}`}>
+                <button
+                  className={`unlock-button ${plan.isBestSeller ? 'hero-button' : ''}`}
+                  onClick={scrollToContactForm}
+                >
                   {plan.buttonText}
                 </button>
               </div>

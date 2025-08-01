@@ -101,55 +101,55 @@ body {
 
 /* ----------- Responsive (Mobile) ----------- */
 @media (max-width: 768px) {
-  /* Ensure navbar is still a flex container */
   .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Reverted for mobile to keep logo/hamburger/cta spread */
+    justify-content: space-between;
+    padding: 12px 20px; /* slightly reduced padding for compact spacing */
   }
 
-  /* Swap the order on mobile:
-     - CTA button first (order: 1)
-     - Hamburger second (order: 2)
-     - Nav links last (order: 3)
-  */
+  /* CTA first, Hamburger second */
   .nav-cta {
     order: 1;
-    margin-left: 20px; /* Re-add margin for spacing on mobile */
+    margin-right: 10px; /* ✅ adds space between button and hamburger */
   }
+
+  .nav-cta .btn-cta {
+    padding: 10px 16px; /* ✅ smaller button */
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(5, 184, 103, 0.3);
+  }
+
   .hamburger {
     display: block;
     order: 2;
-  }
-  .nav-links {
-    order: 3;
-    /* Reset margins for mobile dropdown */
-    margin: 0;
+    font-size: 24px;
   }
 
-  /* Nav Links become a dropdown */
   .nav-links {
+    order: 3;
+    margin: 0;
     position: absolute;
-    top: 70px; /* just below the navbar */
+    top: 70px;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* Original color */
+    background-color: rgba(255, 255, 255, 0.9);
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     gap: 15px;
     padding: 20px;
     transform: translateY(-150%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Original color */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Slide down when .open is applied */
   .nav-links.open {
     transform: translateY(0);
   }
 
-  /* Mobile link styles */
   .nav-links li a {
-    color: #333; /* Original color */
+    color: #333;
     font-size: 1rem;
   }
 }

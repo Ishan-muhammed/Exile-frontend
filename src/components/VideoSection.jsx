@@ -1,15 +1,21 @@
 import React from "react";
 import "./VideoSection.css";
-// Import your video file here with the correct filename
-import Launchvideo from "./Images/Launch2.mp4";
 
 const VideoSection = () => {
   return (
     <section className="video-section">
       <div className="video-box">
-        {/* Added 'controls' and removed 'autoplay', 'loop', and 'muted' */}
-        <video className="video-player" controls playsInline>
-          <source src={Launchvideo} type="video/mp4" />
+        <video
+          className="video-player"
+          controls
+          autoPlay
+          muted
+          playsInline
+        >
+          <source
+            src="https://www.dropbox.com/scl/fi/73iifgs7qepl1tf15tzc2/Launch-video.mp4?rlkey=nmxuf0s12swsw9no080i94ib3&raw=1"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </div>
