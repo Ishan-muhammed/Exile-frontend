@@ -80,7 +80,7 @@ const NewProduct = () => {
     <div className="newproduct-container">
       <div className="newproduct-max-width">
         <div className="newproduct-header">
-          <h2 className="newproduct-title">Our Products</h2>
+          <h2 className="newproduct-title">Our Prices</h2>
           <p className="newproduct-subtitle">
             Choose the perfect plan for your business needs
           </p>
