@@ -9,6 +9,16 @@ import Box6 from "./Images/accent6.mp3";
 import Box7 from "./Images/accent7.mp3";
 import Box8 from "./Images/accent8.mp3";
 import Box9 from "./Images/accent9.mp3";
+import SpanishAccent from "./Images/spanishaccent.mp3";
+import IndianAccent from "./Images/indianaccent.mp3";
+import AmericanAccent from "./Images/Americanaccent.mp3";
+import BritishAccent from "./Images/britishaccent.mp3";
+import ArabicAccent from "./Images/arabicaccent.mp3";
+import SpanishLang from "./Images/spanishlang.mp3";
+import RussiaLang from "./Images/Russialang.mp3";
+import FrenchLang from "./Images/Frenchlangmp.3.mp3";
+import Hindi from "./Images/Hindi.mp3";
+import GermanLan from "./Images/germanlan.mp3";
 
 import "./VoiceSlider.css";
 
@@ -292,27 +302,79 @@ const VoiceRow = ({ voiceData, direction = "left", rowId }) => {
 const VoiceSlider = () => {
   const firstRowVoiceData = [
     {
-      name: "Maya Isabella",
+      name: "Aliyah",
       gender: "Female",
-      accent: "Spanish Accent - Spanish",
-      audio:  Box2
+      accent: "Spanish Accent",
+      audio: SpanishAccent
     },
-    { name: "Alex Johnson", gender: "Male", accent: "British", audio: Box1 },
-    { name: "Sophie Chen", gender: "Female", accent: "American", audio: Box2 },
-    { name: "Marcus Williams", gender: "Male", accent: "Australian", audio: Box3 },
-    { name: "Elena Rodriguez", gender: "Female", accent: "Mexican", audio: Box4 }
+    {
+      name: "Aliyah",
+      gender: "Female", 
+      accent: "Indian Accent",
+      audio: IndianAccent
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "American Accent", 
+      audio: AmericanAccent
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "British Accent",
+      audio: BritishAccent
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "Arabic Accent",
+      audio: ArabicAccent
+    }
   ];
 
   const secondRowVoiceData = [
-    { name: "Isabella Cruz", gender: "Female", accent: "Italian", audio: Box5 },
-    { name: "James Wilson", gender: "Male", accent: "Irish", audio: Box6 },
-    { name: "Priya Sharma", gender: "Female", accent: "Indian", audio: Box7 },
-    { name: "Hans Mueller", gender: "Male", accent: "German", audio: Box8 },
-    { name: "Sakura Tanaka", gender: "Female", accent: "Japanese", audio: Box9 }
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "Spanish Language",
+      audio: SpanishLang
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "Russian Language",
+      audio: RussiaLang
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "French Language",
+      audio: FrenchLang
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "Hindi Language",
+      audio: Hindi
+    },
+    {
+      name: "Aliyah",
+      gender: "Female",
+      accent: "German Language",
+      audio: GermanLan
+    }
   ];
 
   return (
     <section className="infinite-voice-section">
+      <div className="voice-section-heading">
+        <h2 className="voice-section-title">Test Out Our Most Used Voices</h2>
+        <p className="voice-section-subtitle">
+          Along with multiple languages, we offer different gender voices with different accents!
+        </p>
+      </div>
+      
       <div className="voice-wrapper">
         <VoiceRow voiceData={firstRowVoiceData} direction="left" rowId="row-1" />
         <VoiceRow voiceData={secondRowVoiceData} direction="right" rowId="row-2" />
