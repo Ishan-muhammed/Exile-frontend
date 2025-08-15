@@ -10,11 +10,23 @@
     <meta name="keywords" content="AI voice agent for hotels, hotel automation, AI receptionist, automated hotel booking, hospitality AI, hotel customer service automation" />
     <meta name="author" content="Exile-Automate" />
 
-    <!-- ✅ Simplified favicon setup with cache busting -->
-    <link rel="icon" href="/favicon.ico?v=3" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico?v=3" type="image/x-icon" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+    <!-- ✅ Aggressive favicon setup with strong cache busting -->
+    <link rel="icon" href="/favicon.ico?v=4&t=1234567890" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico?v=4&t=1234567890" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4&t=1234567890" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4&t=1234567890" />
+    
+    <!-- Force favicon refresh with JavaScript -->
+    <script>
+      // Force favicon refresh
+      var link = document.querySelector("link[rel~='icon']");
+      if (!link) {
+          link = document.createElement('link');
+          link.rel = 'icon';
+          document.getElementsByTagName('head')[0].appendChild(link);
+      }
+      link.href = '/favicon.ico?v=' + new Date().getTime();
+    </script>
 
     <!-- Open Graph Tags for Social Media -->
     <meta property="og:title" content="Exile-Automate | AI Voice Agent for Hotels" />
