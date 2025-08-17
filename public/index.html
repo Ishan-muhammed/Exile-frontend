@@ -2,59 +2,90 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Exile-Automate | AI Voice Agent for Hotels | Hotel Automation</title>
-    
-    <meta name="description" content="Exile-Automate offers AI-powered voice agents for hotels, automating guest interactions, booking management, and customer support. Enhance your hotel's efficiency with our cutting-edge AI voice assistant." /> 
-    <meta name="keywords" content="AI voice agent for hotels, hotel automation, AI receptionist, automated hotel booking, hospitality AI, hotel customer service automation" />
+
+    <meta name="description" content="Exile-Automate is a hotel transformation company. We run a focused 1‑week on‑site audit and convert operations into an AI‑powered hotel—deploying AI voice agents, automated booking, and intelligent guest support to raise efficiency and revenue." />
+    <meta name="keywords" content="AI voice agent for hotels, hotel automation, AI receptionist, automated hotel booking, hospitality AI, hotel customer service automation, hotel transformation company, 1-week audit, AI-powered hotel operations, AI deployment" />
     <meta name="author" content="Exile-Automate" />
 
-    <!-- ✅ Aggressive favicon setup with strong cache busting -->
-    <link rel="icon" href="/favicon.ico?v=4&t=1234567890" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico?v=4&t=1234567890" type="image/x-icon" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4&t=1234567890" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4&t=1234567890" />
-    
-    <!-- Force favicon refresh with JavaScript -->
-    <script>
-      // Force favicon refresh
-      var link = document.querySelector("link[rel~='icon']");
-      if (!link) {
-          link = document.createElement('link');
-          link.rel = 'icon';
-          document.getElementsByTagName('head')[0].appendChild(link);
-      }
-      link.href = '/favicon.ico?v=' + new Date().getTime();
+    <!-- Canonical (prefer www) -->
+    <link rel="canonical" href="https://www.exileautomate.com/" />
+    <!-- Optional alternate (non-www) -->
+    <link rel="alternate" href="https://exileautomate.com/" />
+
+    <!-- Favicons and platform icons from /public -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+
+    <!-- Open Graph (social previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Exile-Automate | AI Voice Agent for Hotels" />
+    <meta property="og:description" content="1‑week audit → full AI hotel: voice agents, automated booking, and AI guest support." />
+    <meta property="og:url" content="https://www.exileautomate.com/" />
+    <meta property="og:image" content="https://www.exileautomate.com/og/1200x630-card.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Exile-Automate | AI Voice Agent for Hotels" />
+    <meta name="twitter:description" content="Audit in a week, transform into an AI‑powered hotel with voice agents and automated operations." />
+    <meta name="twitter:image" content="https://www.exileautomate.com/og/1200x630-card.jpg" />
+
+    <!-- Organization JSON-LD with preferred logo (432×432) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Exile-Automate",
+      "url": "https://www.exileautomate.com/",
+      "logo": "https://www.exileautomate.com/exile-logo-green-white.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/company/exileautomate",
+        "https://www.instagram.com/exileautomate",
+        "https://www.facebook.com/exileautomate"
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+91-9605537336",
+        "contactType": "customer service",
+        "areaServed": "IN"
+      }]
+    }
     </script>
 
-    <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Exile-Automate | AI Voice Agent for Hotels" />
-    <meta property="og:description" content="Automate your hotel's customer service with our AI-powered voice agent. Improve guest experience and streamline operations." />
-    <meta property="og:image" content="%PUBLIC_URL%/exile-logo-green-white.jpg" />
-    <meta property="og:url" content="https://www.exileautomate.com/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Structured Data for SEO (JSON-LD) -->
+    <!-- WebSite JSON-LD (sitelinks search) -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.exileautomate.com/",
+      "name": "Exile-Automate",
+      "alternateName": "Exile Automate",
+      "publisher": {
         "@type": "Organization",
         "name": "Exile-Automate",
         "url": "https://www.exileautomate.com/",
-        "logo": "%PUBLIC_URL%/exile-logo-green-white.jpg",
-        "description": "Exile-Automate provides AI voice agent services tailored for hotels.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91 9605537336",
-          "contactType": "Customer Service"
-        },
-        "sameAs": [
-          "https://www.facebook.com/yourpage",
-          "https://www.linkedin.com/company/yourpage",
-          "https://www.instagram.com/yourpage"
-        ]
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.exileautomate.com/exile-logo-green-white.jpg",
+          "width": 432,
+          "height": 432
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.exileautomate.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
+    }
     </script>
   </head>
   <body>
