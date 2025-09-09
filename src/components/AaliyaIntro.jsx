@@ -32,16 +32,15 @@ const AaliyaIntro = () => {
     >
       {/* ✅ Heading */}
       <h2 className="aaliya-heading">
-        Meet Our New <span className="green-text">AI Receptionist Aliyah</span>
+        Meet Our New <span className="green-text">AI Receptionist Aaliya</span>
       </h2>
 
       <div className="aaliya-box">
         <div className="aaliya-text">
           <h1>
-            I'm <span className="highlight">Aliyah</span>
+            I'm Aaliya
           </h1>
           <p>your AI receptionist</p>
-
           {/* ✅ Audio player */}
           <div className="audio-player">
             <button className="play-button" onClick={toggleAudio}>

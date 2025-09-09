@@ -56,7 +56,7 @@
 }
 
 .highlight {
-  color: white;
+  color: #e0e0e0;
 }
 
 .audio-player {
@@ -67,7 +67,7 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .play-button {
@@ -121,7 +121,7 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ✅ Added soft shadow */
   transition: all 0.2s ease-in-out;
 }

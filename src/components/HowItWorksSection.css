@@ -12,7 +12,7 @@
   .how-it-works-subheading {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #04c971; /* Green accent color */
+    color: #333; /* Green accent color */
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 1px;
@@ -21,7 +21,7 @@
   .how-it-works-heading {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #333;
+    color: #05b867;
     margin-bottom: 60px;
   }
   
@@ -61,7 +61,7 @@
   .step-number {
     font-size: 2rem;
     font-weight: 300;
-    color: #ccc;
+    color: #05b867;
   }
   
   .step-icon {

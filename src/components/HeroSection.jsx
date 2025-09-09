@@ -104,7 +104,7 @@ const HeroSection = () => {
           onClick={handleScrollToAliyah}
           className="btn-hero"
         >
-         Meet Our Aliyah
+         Meet Our Aaliyah
         </a>
       </div>
     </section>

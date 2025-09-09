@@ -42,9 +42,8 @@ const BenefitsSection = () => {
           What you get with Exile Automate
         </h2>
         <p className="benefits-subheading">
-        Free up your front desk. Our AI receptionist handles every call. That means no missed opportunities, happier guests, and more revenue for your hotel..
+        Free up your front desk. Our AI receptionist handles every call. That means no missed opportunities, happier guests, and more revenue for your hotel.
         </p>
-
         <div className="benefits-grid">
           {benefitsData.map((benefit, index) => (
             <div key={index} className="benefit-card">
@@ -58,7 +57,8 @@ const BenefitsSection = () => {
               <h3>{benefit.title}</h3>
               <p>{benefit.description}</p>
             </div>
-          ))}
+          ))
+          }
         </div>
       </div>
     </section>

@@ -16,9 +16,13 @@
 }
 
 .cal-header-left-heading {
-  font-size: 45px;
+  font-size: 40px;
   color: #333; /* Changed to dark text */
   margin-bottom: 20px;
+}
+
+.highlight {
+  color: #05b867; /* Added the requested green color for "Connect" text */
 }
 
 .cal-header-right-para {

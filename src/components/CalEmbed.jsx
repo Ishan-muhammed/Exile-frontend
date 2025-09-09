@@ -7,13 +7,13 @@ function CalEmbed() {
       {/* Top Header with two "boxes": Left (title) & Right (subtitle) */}
       <div className="cal-header">
         <div className="cal-header-left">
-          <h2>
-            Let’s <span className="highlight">Connect</span>
+          <h2 className="cal-header-left-heading">
+            Let's <span className="highlight">Connect</span>
           </h2>
         </div>
         <div className="cal-header-right">
-          <p>
-            If you’re ready to explore an AI Voice solution for your business,
+          <p className="cal-header-right-para">
+            If you're ready to explore an AI Voice solution for your business,
             feel free to schedule a discovery call.
           </p>
         </div>

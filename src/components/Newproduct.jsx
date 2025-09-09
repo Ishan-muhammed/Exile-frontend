@@ -12,7 +12,11 @@ const NewProduct = () => {
 
   const products = [
     {
-      title: 'Aliyah v1 - Your Perfect Start',
+      title: (
+        <>
+          <span className="aaliya-text">Aaliya v01</span> - Your Perfect Start
+        </>
+      ),
       subtitle: 'Built Custom For Your Business.',
       isPopular: false,
       specialPlan: {
@@ -33,7 +37,11 @@ const NewProduct = () => {
       buttonStyle: 'outline',
     },
     {
-      title: 'Aliyah v2 - Your Way To Scale',
+      title: (
+        <>
+          <span className="aaliya-text">Aaliya v02</span> - Your Way To Scale
+        </>
+      ),
       subtitle: 'Built Custom For Your Business.',
       isPopular: false,
       specialPlan: {
@@ -54,7 +62,11 @@ const NewProduct = () => {
       buttonStyle: 'primary',
     },
     {
-      title: 'Aliyah v3 - Enterprise Scale',
+      title: (
+        <>
+          <span className="aaliya-text">Aaliya v03</span> - Enterprise Scale
+        </>
+      ),
       subtitle: 'Built Custom For Your Business.',
       isPopular: false,
       specialPlan: {
@@ -80,7 +92,7 @@ const NewProduct = () => {
     <div className="newproduct-container">
       <div className="newproduct-max-width">
         <div className="newproduct-header">
-          <h2 className="newproduct-title">Our Prices</h2>
+          <h2 className="newproduct-title">Find The Right Fit</h2>
           <p className="newproduct-subtitle">
             Choose the perfect plan for your business needs
           </p>
